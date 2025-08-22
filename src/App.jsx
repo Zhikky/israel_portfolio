@@ -1,7 +1,8 @@
 import "./App.css";
+import Home from "./home.jsx";
 
 function App() {
-  return <h1 class="text-sm font-bold underline">Hello world!</h1>;
+  return <Home />;
 }
 
 export default App;

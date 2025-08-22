@@ -1,44 +1,55 @@
 @import "tailwindcss";
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@theme {
+  --font-vina-sans: "Vina Sans", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-covered-by-your-grace: "Covered By Your Grace", cursive;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* globals.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.flicking-camera {
+  align-items: center;
+  justify-content: space-between;
+}
+
+[data-aos="israel-1"] {
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: rotate(-24deg) translateX(-220px) translateY(-60px);
   }
 }
+[data-aos="israel-2"] {
+  transition-property: transform;
 
-.card {
-  padding: 2em;
+  &.aos-animate {
+    transform: rotate(-4deg) translateX(-80px) translateY(-20px);
+  }
 }
+[data-aos="israel-3"] {
+  transition-property: transform;
 
-.read-the-docs {
-  color: #888;
+  &.aos-animate {
+    transform: rotate(12deg) translateX(70px) translateY(0px);
+  }
+}
+[data-aos="israel-4"] {
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: rotate(-20deg) translateX(200px) translateY(90px);
+  }
 }
