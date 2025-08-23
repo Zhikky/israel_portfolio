@@ -87,7 +87,7 @@ export default function Home() {
       {loading ? (
         <div className="loader-container w-full h-screen flex justify-center items-center bg-[#1A1A1A]">
           <ClipLoader
-            color="#94E1CApinner package
+            color="#94E1CA"
             loading={loading}
             // cssOverride={override}
             size={150}
