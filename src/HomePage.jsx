@@ -66,7 +66,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    window.addEventListener("load", () => setLoading(false));
+    // Simulate loading delay OR wait for assets/components
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // 5 seconds (adjust as needed)
+
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
