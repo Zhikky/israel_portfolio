@@ -472,27 +472,39 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-left gap-14 w-39">
-            <div className="flex rounded-[28px] bg-white p-1 h-fit w-fit">
+            <a
+              href=""
+              target="_blank"
+              className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
+            >
               <div className="border-4 border-solid border-black rounded-3xl px-6 py-4  flex items-center gap-2 bg-[#9EE5FF]">
                 <span className="font-vina-sans text-3xl leading-none">
                   LinkedIn
                 </span>
               </div>
-            </div>
-            <div className="flex rounded-[28px] bg-white p-1 h-fit w-fit">
+            </a>
+            <a
+              href=""
+              target="_blank"
+              className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
+            >
               <div className="border-4 border-solid border-black rounded-3xl px-6 py-4  flex items-center gap-2 bg-[#FFF0C1]">
                 <span className="font-vina-sans text-3xl leading-none">
                   BEHANCE
                 </span>
               </div>
-            </div>
-            <div className="flex rounded-[28px] bg-white p-1 h-fit w-fit">
+            </a>
+            <a
+              href=""
+              target="_blank"
+              className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
+            >
               <div className="border-4 border-solid border-black rounded-3xl px-6 py-4  flex items-center gap-2 bg-[#F0BFFF]">
                 <span className="font-vina-sans text-3xl leading-none">
                   INSTAGRAM
                 </span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </footer>
