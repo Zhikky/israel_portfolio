@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Bars } from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 import "@egjs/react-flicking/dist/flicking.css";
 import Flicking from "@egjs/react-flicking";
 
@@ -86,14 +86,13 @@ export default function Home() {
     <div>
       {loading ? (
         <div className="loader-container w-full h-screen flex justify-center items-center bg-[#1A1A1A]">
-          <Bars
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="bars-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
+          <ClipLoader
+            color="#94E1CApinner package
+            loading={loading}
+            // cssOverride={override}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
           />
         </div>
       ) : (
