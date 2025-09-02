@@ -51,7 +51,7 @@ export default function ExperienceCard({
             left: pos.x,
             transform: "translate(-50%, -50%)",
           }}
-          className="w-23 z-2 shadow h-23 object-contain rounded-3xl absolute pointer-events-none transition-transform duration-75"
+          className="w-23 z-2 shadow h-23 object-contain rounded-3xl absolute pointer-events-none transition-transform duration-100"
         />
       )}
     </div>
