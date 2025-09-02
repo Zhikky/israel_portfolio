@@ -2,10 +2,9 @@ import preaching from "../../../assets/Group 9 (1).webp";
 import youtube from "../../../assets/youtube_logo.png";
 import ProfileCard from "../../composables/profileCard";
 
-
 export default function Leading() {
   return (
-    <section className="flex flex-col max-w-[1440px] w-full py-60 px-38 min-h-300">
+    <section className="flex flex-col max-w-[1440px] w-full py-60 px-37 min-h-300">
       <h1 className="font-vina-sans text-7xl tracking-tight max-w-2xl text-[#FFF0C1] mb-10">
         I lead a local faith community where I teach, guide, and walk with
         people in their spiritual journeys
@@ -19,27 +18,32 @@ export default function Leading() {
       </div>
 
       <div className="flex justify-between mt-9 w-full gap-12">
-        <p className="flex-1 text-white text-base font-geist">
-          I am a Product Designer with over 6 years of experience in designing
-          digital products. I have a knack for solving complex user problems
-          with a research-driven approach. Alongside my interest in research, I
-          recently became a lot more fascinated with Product Strategy and have
-          been actively learning and delivering value in that line.
+        <p className="flex-1 text-white text-[14px] font-geist">
+          I’m privileged to Pastor a local Church assembly in the city of Lagos,
+          Nigeria called “The Sent House”. I also lead an interdenominational
+          ministry (Kerusso Ministry) across 3 campuses in Nigeria where I
+          passionately teach God’s word in the demonstration of His Spirit and
+          Power as well as disciple folks who want to walk at the center of his
+          will for their lives.
         </p>
-        <p className="flex-1 text-white text-base font-geist">
-          I am a Product Designer with over 6 years of experience in designing
-          digital products. I have a knack for solving complex user problems
-          with a research-driven approach. Alongside my interest in research, I
-          recently became a lot more fascinated with Product Strategy and have
-          been actively learning and delivering value in that line.
+        <p className="flex-1 text-white text-[14px] font-geist">
+          My goal to see people come to the knowledge of Christ and make Him
+          known to the world is what birthed Kerusso Ministry as well as other
+          initiatives to ensure that believers are discipled to effectively
+          carry out God’s plan on the Earth. Being involved in the secular space
+          myself, I strive to help believers emphasize and uphold the balance
+          between fulfilling the assignment of the gospel given to all men while
+          maintaining excellence in their secular rendeavors.
         </p>
         <div className=" flex flex-col items-center shrink-0 grow-0 basis=[316px]">
-          <video
-            src="https://www.youtube.com/live/U8p1aiYuPF8?si=qEiYw6AFZsyJlamm"
-            controls
+          <iframe
+            src="https://www.youtube.com/embed/U8p1aiYuPF8?si=qEiYw6AFZsyJlamm"
+            // frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
             className="w-full h-auto rounded-lg shadow-lg border-15 border-[#2E2E2E]"
-          ></video>
-          <div className="flex items-center justify-center gap-2 mt-3 text-base font-geist">
+          ></iframe>
+          <div className="flex items-center justify-center gap-2 mt-3  font-geist">
             <img src={youtube} alt="youtube" className="w-8 mt-1" />
             <span className="font-vina-sans text-2xl text-amber-100 tracking-tight">
               listen to my sermons on youtube

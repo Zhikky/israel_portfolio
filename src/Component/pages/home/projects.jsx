@@ -1,12 +1,14 @@
-import project1 from "../../../assets/projects/project1.webp";
-import project2 from "../../../assets/projects/project2.webp";
-import project3 from "../../../assets/projects/project3.webp";
+// import project1 from "../../../assets/projects/project1.webp";
+// import project2 from "../../../assets/projects/project2.webp";
+// import project3 from "../../../assets/projects/project3.webp";
 import ProfileCard from "../../composables/profileCard";
-import ProjectCard from "../../composables/projectCard";
+// import ProjectCard from "../../composables/projectCard";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col items-center w-full py-60 min-h-300">
+    <section
+      className="flex flex-col items-center w-full pt-60    "
+    >
       <div className="w-fit max-w-2xl relative -left-35">
         <div className="absolute right-[-140px] top-[-40px] rotate-[15deg] hover:rotate-0 cursor-pointer duration-200 ">
           <ProfileCard role="featured work" color="#94E1CA" />
@@ -15,7 +17,7 @@ export default function Projects() {
           my Recent Projects
         </h1>
       </div>
-
+      {/* 
       <div className="flex flex-col w-full h-266 gap-5 mt-[-4px] relative overflow-y-auto scroll-smooth no-scrollbar">
         <ProjectCard
           projectImage={project1}
@@ -51,7 +53,7 @@ export default function Projects() {
         className="mt-18 rounded-2xl py-6 px-8 self-center text-base text-white leading-none cursor-pointer w-fit font-geist font-semibold"
       >
         View my portfolio
-      </button>
+      </button> */}
     </section>
   );
 }

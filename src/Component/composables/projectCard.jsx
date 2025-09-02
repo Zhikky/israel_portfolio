@@ -10,7 +10,7 @@ export default function ProjectCard({
   return (
     <div
       style={{ color: bgColor, top: topValue }}
-      className={`width-full flex flex-col items-center justify-between shadow-[0px_-7px_4px_0px_#00000040] h-162 bg-[#2E2E2E]  px-47 sticky`}
+      className={`w-full sticky flex flex-col items-center justify-between shadow-[0px_-7px_4px_0px_#00000040] h-162 bg-[#2E2E2E] px-47`}
     >
       <div className="flex flex-col max-w-2xl gap-10 pt-13 justify-between overflow-hidden">
         <div className="flex justify-between items-center ">

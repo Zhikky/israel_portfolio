@@ -5,7 +5,7 @@ export default function Navbar({scrolled}) {
           backgroundColor: scrolled ? "#242424" : "#00000033",
           top: scrolled ? "18px" : "72px",
         }}
-        className={`flex sticky  z-50 justify-between items-center duration-600 py-4 px-6 rounded-4xl max-w-[1440px] w-8/10 h-24 
+        className={`flex sticky z-50 justify-between items-center duration-600 py-4 px-6 rounded-4xl max-w-[1440px] w-8/10 h-24 
      backdrop-blur-sm`}
       >
         <div className="text-white text-3xl font-vina-sans">ISRAEL ADETUWO</div>

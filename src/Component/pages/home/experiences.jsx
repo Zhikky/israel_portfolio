@@ -10,7 +10,7 @@ import vencru from "../../../assets/brandIcons/Frame 1618869165 (4).png";
 
 export default function Experiences(){
     return(
-        <section className="flex flex-col max-w-[1440px] w-full py-60 px-38 min-h-300">
+        <section className="flex flex-col max-w-[1440px] w-full py-60 px-38 min-h-300 bg-[#1A1A1A] z-0">
                     <div className="w-fit relative">
                       <div className="absolute left-[-75px] top-[-52px] rotate-[-7.9deg] hover:rotate-0 cursor-pointer duration-200 ">
                         <ProfileCard role="EXPERIENCE" color="#FFB05F" />
