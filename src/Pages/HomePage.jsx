@@ -1,21 +1,22 @@
 import { useState, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
+import { useNavigationType } from "react-router-dom";
 
 // Importing composable components
-import Navbar from "./Component/composables/navbar";
-import Footer from "./Component/composables/footer";
+import Navbar from "../Component/composables/navbar";
+import Footer from "../Component/composables/footer";
 
 // Importing page components
-import HeroSection from "./Component/pages/home/heroSection";
-import LogoCarousels from "./Component/pages/home/logoCarousels";
-import BeyoundTheScreen from "./Component/pages/home/beyondTheScreen";
-import Leading from "./Component/pages/home/leading";
-import Projects from "./Component/pages/home/projects";
-import Experiences from "./Component/pages/home/experiences";
-import ProjectCard from "./Component/composables/projectCard";
-import project1 from "./assets/projects/project1.webp";
-import project2 from "./assets/projects/project2.webp";
-import project3 from "./assets/projects/project3.webp";
+import HeroSection from "../Component/pages/home/heroSection";
+import LogoCarousels from "../Component/pages/home/logoCarousels";
+import BeyoundTheScreen from "../Component/pages/home/beyondTheScreen";
+import Leading from "../Component/pages/home/leading";
+import Projects from "../Component/pages/home/projects";
+import Experiences from "../Component/pages/home/experiences";
+import ProjectCard from "../Component/composables/projectCard";
+import project1 from "../assets/projects/project1.webp";
+import project2 from "../assets/projects/project2.webp";
+import project3 from "../assets/projects/project3.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -23,13 +24,23 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
 
 export default function Home() {
-  // const plugins = [
-  //   new AutoPlay({ duration: 1000, direction: "NEXT", stopOnHover: true }),
-  // ];
 
   const [scrolled, setScrolled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  const navigationType = useNavigationType;
+
+  useEffect(() => {
+    if (navigationType === "POP") {
+      // Direct load or refresh
+      const timer = setTimeout(() => setLoading(false), 5000);
+      return () => clearTimeout(timer);
+    } else {
+      // Navigation from another page
+      setLoading(false);
+    }
+  }, [navigationType]);
 
   const handleCopy = () => {
     navigator.clipboard
@@ -42,15 +53,6 @@ export default function Home() {
         console.error("Failed to copy: ", err);
       });
   };
-
-  useEffect(() => {
-    // Simulate loading delay OR wait for assets/components
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000); // 5 seconds (adjust as needed)
-
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +87,6 @@ export default function Home() {
             style={{ backgroundColor: "#1A1A1A" }}
             className="flex flex-col items-center min-h-screen w-full  scroll-smooth"
           >
-            
             <HeroSection />
             <LogoCarousels />
             <BeyoundTheScreen />

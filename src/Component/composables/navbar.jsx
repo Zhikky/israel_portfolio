@@ -1,43 +1,74 @@
-export default function Navbar({scrolled}) {
-    return (
-      <div
-        style={{
-          backgroundColor: scrolled ? "#242424" : "#00000033",
-          top: scrolled ? "18px" : "72px",
-        }}
-        className={`flex sticky z-50 justify-between items-center duration-600 py-4 px-6 rounded-4xl max-w-[1440px] w-8/10 h-24 
+import { NavLink } from "react-router-dom";
+import icon from "../../assets/Ellipse 1.png";
+
+export default function Navbar({ scrolled }) {
+  return (
+    <div
+      style={{
+        backgroundColor: scrolled ? "#242424" : "#00000033",
+        top: scrolled ? "18px" : "72px",
+      }}
+      className={`flex sticky z-50 justify-between items-center duration-600 py-4 px-6 rounded-4xl max-w-[1440px] w-8/10 h-24 
      backdrop-blur-sm`}
-      >
-        <div className="text-white text-3xl font-vina-sans">ISRAEL ADETUWO</div>
-        <div className="flex space-x-4">
-          <a
-            href="#"
-            className="text-white text-base font-geist hover:underline"
-          >
-            about
-          </a>
-          <a
-            href="#"
-            className="text-white text-base font-geist hover:underline"
-          >
-            porfolio
-          </a>
-          <a
-            href="#"
-            className="text-white text-base font-geist hover:underline"
-          >
-            contact
-          </a>
-          <a
-            href="#"
-            className="text-white text-base font-geist hover:underline"
-          >
-            resume
-          </a>
-        </div>
-        <button className="rounded-2xl py-6 px-8 bg-[#94E1CA] text-base leading-none cursor-pointer">
-          Get in touch
-        </button>
+    >
+      <NavLink to="/" className="text-white text-3xl font-vina-sans">
+        ISRAEL ADETUWO
+      </NavLink>
+      <div className="flex space-x-4">
+        <NavLink
+          to="/about"
+          className={() =>
+            `inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              about
+              <img
+                src={icon}
+                alt="icon"
+                className={`absolute w-[66px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+        <NavLink
+          to="/portfolio"
+          className={() =>
+            `inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              portfolio
+              <img
+                src={icon}
+                alt="icon"
+                className={`absolute w-[66px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+        <a
+          to="#"
+          className="text-white w-[66px] text-base font-geist hover:underline"
+        >
+          contact
+        </a>
+        <a
+          to="#"
+          className="text-white w-[66px] text-base font-geist hover:underline"
+        >
+          resume
+        </a>
       </div>
-    );
+      <button className="rounded-2xl py-6 px-8 bg-[#94E1CA] text-base leading-none cursor-pointer">
+        Get in touch
+      </button>
+    </div>
+  );
 }

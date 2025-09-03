@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 @theme {
   --font-vina-sans: "Vina Sans", sans-serif;
   --font-geist: "Geist", sans-serif;
@@ -53,3 +63,4 @@
     transform: rotate(-20deg) translateX(200px) translateY(90px);
   }
 }
+
