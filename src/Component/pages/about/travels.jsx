@@ -30,7 +30,7 @@ export default function Travels() {
           scrub: true,
           invalidateOnRefresh: true, // recalc on resize/font loads
           anticipatePin: 1,
-          snap: 1 / (track.children.length - 1), // <— uncomment if you want panel snapping
+        //   snap: 1 / (track.children.length - 1), // <— uncomment if you want panel snapping
         },
       });
     }, pinRef);
