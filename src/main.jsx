@@ -4,15 +4,21 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/HomePage.jsx";
 import About from "./Pages/AboutPage.jsx";
+import RootLayout from "./Component/utilities/RootLayout.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    element: <RootLayout />, // 👈 wrap everything in the layout
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
