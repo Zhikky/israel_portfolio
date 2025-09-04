@@ -23,21 +23,12 @@ export default function Travels() {
         x: () => -maxX(),
         ease: "none",
         scrollTrigger: {
-          //   trigger: pinRef.current,
-          //   start: "top top", // when the top of the trigger hits the top of the viewport
-          //   end: "+=1000", // scroll distance matches horizontal width
-          //   pin: true,
-          //   scrub: true,
-          //   invalidateOnRefresh: true, // recalc on resize/font loads
-          //   anticipatePin: 1,
-          //   snap: 1 / (track.children.length - 1), // <— uncomment if you want panel snapping
-
           trigger: pinRef.current,
-          start: "top top", // when the top of the trigger hits the top of the viewport
-          end: "+=1000",
+          start: "top-=280 top", // begins when container is 450px from viewport top
+          end: "+=" + (track.scrollWidth - window.innerWidth), // distance for horizontal scroll
           pin: true,
-          pinSpacing: true,
           scrub: true,
+          invalidateOnRefresh: true,
         },
       });
     }, pinRef);
@@ -109,4 +100,3 @@ export default function Travels() {
     </section>
   );
 }
-
