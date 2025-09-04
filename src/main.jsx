@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./Pages/HomePage.jsx";
 import About from "./Pages/AboutPage.jsx";
 import RootLayout from "./Component/utilities/RootLayout.jsx";
+import PortfolioPage from "./Pages/PortfolioPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/portfolio",
+        element: <PortfolioPage />,
       },
     ],
   },

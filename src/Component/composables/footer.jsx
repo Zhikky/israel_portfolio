@@ -1,6 +1,6 @@
 export default function Footer({ handleCopy, showPopup }) {
   return (
-    <footer className="w-full bg-[#2E2E2E] flex justify-center">
+    <footer className="w-full bg-[#2E2E2E] flex justify-center z-50">
       <div className="flex justify-between w-full max-w-[1440px] p-38">
         <div className="flex flex-col w-7/10 gap-14">
           <p className="text-white text-2xl font-geist w-8/10">
