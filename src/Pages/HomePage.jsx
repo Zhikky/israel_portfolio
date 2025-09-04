@@ -24,7 +24,6 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
 
 export default function Home() {
-
   const [scrolled, setScrolled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -38,7 +37,8 @@ export default function Home() {
       return () => clearTimeout(timer);
     } else {
       // Navigation from another page
-      setLoading(false);
+      const timer = setTimeout(() => setLoading(false), 1200);
+      return () => clearTimeout(timer);
     }
   }, [navigationType]);
 
