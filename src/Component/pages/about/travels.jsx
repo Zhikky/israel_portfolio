@@ -44,7 +44,7 @@ export default function Travels() {
   return (
     <section
       ref={pinRef}
-      className="relative w-[3500px] overflow-hidden pt-62 pb-40"
+      className="relative w-[3500px] overflow-hidden pt-[261px] pb-[160px]"
     >
       {/* The horizontal track */}
       <div
