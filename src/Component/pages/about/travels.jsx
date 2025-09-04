@@ -24,7 +24,7 @@ export default function Travels() {
         ease: "none",
         scrollTrigger: {
           trigger: pinRef.current,
-          start: "top top",
+          start: "center center", // when the top of the trigger hits the top of the viewport
           end: "+=1000", // scroll distance matches horizontal width
           pin: true,
           scrub: true,
@@ -44,12 +44,12 @@ export default function Travels() {
   return (
     <section
       ref={pinRef}
-      className="relative w-[3500px] overflow-hidden mt-60 mb-40"
+      className="relative max-w-[1440px] overflow-hidden mt-60 mb-40"
     >
       {/* The horizontal track */}
       <div
         ref={trackRef}
-        className="flex flex-nowrap h-fit will-change-transform gap-10"
+        className="flex flex-nowrap h-fit will-change-transform gap-10 w-[3500px]"
       >
         <p className="font-covered-by-your-grace text-base text-[#fff0c1] w-[240px] ml-37">
           When I’m not designing or teaching, you’ll find me mentoring, planning
