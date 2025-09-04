@@ -24,7 +24,7 @@ export default function Travels() {
         ease: "none",
         scrollTrigger: {
           trigger: pinRef.current,
-          start: "center center", // when the top of the trigger hits the top of the viewport
+          start: "top+=200 center", // when the top of the trigger hits the top of the viewport
           end: "+=1000", // scroll distance matches horizontal width
           pin: true,
           scrub: true,
