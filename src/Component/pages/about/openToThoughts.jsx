@@ -18,8 +18,8 @@ export default function OpenToThoughts() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: textRef.current,
-          start: "center center", // fully invisible when it just enters
-          end: "bottom center", // fully visible when scrolled out
+          start: "top center", // fully invisible when it just enters
+          end: "bottom top", // fully visible when scrolled out
           scrub: true,
         },
       }
