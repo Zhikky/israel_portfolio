@@ -10,29 +10,31 @@ export default function ProjectCard({
   return (
     <div
       style={{ color: bgColor, top: topValue }}
-      className={`w-full sticky flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000040] h-162 bg-[#2E2E2E] px-47 mb-17 z-5`}
+      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25 mb-17 z-5`}
     >
-      <div className="flex flex-col w-full max-w-2xl gap-10 pt-13 justify-between overflow-hidden">
-        <div className="flex justify-between items-center ">
-          <p>{title}</p>
-          <p>{highlight}</p>
-          <p>{year}</p>
-        </div>
+      <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000040] bg-[#2E2E2E] rounded-[20px]">
+        <div className="flex flex-col w-full max-w-2xl gap-10 pt-13 justify-between overflow-hidden">
+          <div className="flex justify-between items-center ">
+            <p>{title}</p>
+            <p>{highlight}</p>
+            <p>{year}</p>
+          </div>
 
-        <div className="flex justify-between items-center">
-          <p className="text-sm font-geist w-48 text-white">{description}</p>
-          <button
-            style={{ backgroundColor: bgColor }}
-            className={`text-black text-xl px-8 py-4 font-vina-sans rounded-lg`}
-          >
-            read case study
-          </button>
-        </div>
+          <div className="flex justify-between items-center">
+            <p className="text-sm font-geist w-48 text-white">{description}</p>
+            <button
+              style={{ backgroundColor: bgColor }}
+              className={`text-black text-xl px-8 py-4 font-vina-sans rounded-lg`}
+            >
+              read case study
+            </button>
+          </div>
 
-        <img
-          src={projectImage}
-          className="w-full object-cover object-top h-103"
-        />
+          <img
+            src={projectImage}
+            className="w-full object-cover object-top h-103"
+          />
+        </div>
       </div>
     </div>
   );
