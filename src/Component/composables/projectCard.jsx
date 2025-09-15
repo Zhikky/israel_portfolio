@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function ProjectCard({
   projectImage,
   bgColor,
@@ -8,9 +10,10 @@ export default function ProjectCard({
   description = "This is a brief description of the project.",
 }) {
   return (
-    <div
+    <NavLink
+      to="/portfolio/futurex"
       style={{ color: bgColor, top: topValue }}
-      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25 mb-17 z-5`}
+      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25 mb-17 z-5 hover:cursor-pointer`}
     >
       <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000040] bg-[#2E2E2E] rounded-[20px]">
         <div className="flex flex-col w-full max-w-2xl gap-10 pt-13 justify-between overflow-hidden">
@@ -36,6 +39,6 @@ export default function ProjectCard({
           />
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 }
