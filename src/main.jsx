@@ -6,6 +6,7 @@ import Home from "./Pages/HomePage.jsx";
 import About from "./Pages/AboutPage.jsx";
 import RootLayout from "./Component/utilities/RootLayout.jsx";
 import PortfolioPage from "./Pages/PortfolioPage.jsx";
+import CaseStudies from "./Pages/CaseStudies.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: "/portfolio",
         element: <PortfolioPage />,
       },
+      {
+        path: "/portfolio/:caseStudyId",
+        element: <CaseStudies/>
+      }
     ],
   },
 ]);
