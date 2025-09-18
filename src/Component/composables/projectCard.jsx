@@ -8,15 +8,16 @@ export default function ProjectCard({
   highlight = "Highlight",
   year = "2023",
   description = "This is a brief description of the project.",
+  paddingTop,
 }) {
   return (
     <NavLink
       to="/portfolio/futurex"
-      style={{ color: bgColor, top: topValue}}
-      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25 mb-17 z-5 hover:cursor-pointer`}
+      style={{ color: bgColor, top: topValue, paddingTop: paddingTop ? paddingTop : "0px" }}
+      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25  z-5 hover:cursor-pointer`}
     >
-      <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000040] bg-[#2E2E2E] rounded-[20px]">
-        <div className="flex flex-col w-full max-w-2xl gap-10 pt-13 justify-between overflow-hidden">
+      <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000025] bg-[#2E2E2E] rounded-[20px]">
+        <div className="flex flex-col w-full max-w-2xl gap-10 pt-10 justify-between overflow-hidden">
           <div className="flex justify-between items-center ">
             <p>{title}</p>
             <p>{highlight}</p>

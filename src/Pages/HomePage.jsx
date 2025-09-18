@@ -110,6 +110,7 @@ export default function Home() {
               bgColor="#94E1CA"
               // topValue="380px"
               topValue="115px"
+              paddingTop="100px"
             />
             <ProjectCard
               projectImage={project3}
@@ -118,11 +119,11 @@ export default function Home() {
               year="2020"
               description="A time planning and tracking app for the average millenial."
               bgColor="#9EE5FF"
-              topValue="600px"
+              topValue="315px"
+              paddingTop="200px"
             />
           </div>
           <Experiences />
-
           <Footer handleCopy={handleCopy} showPopup={showPopup} />
         </div>
       )}

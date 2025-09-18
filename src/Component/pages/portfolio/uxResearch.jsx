@@ -2,7 +2,7 @@ import arrow from "../../../assets/Vector 1.png"
 
 export default function UxResearch() {
   return (
-    <div className="flex flex-col justify-between gap-16 w-full h-fit max-w-[1440px] px-36 mt-35 mb-60">
+    <div className="flex flex-col justify-between gap-16 w-full h-fit max-w-[1440px] px-36 mt-180 mb-60">
       <h2 className="font-vina-sans text-4xl tracking-[-2%] text-white">
         UX Research Case Studies & Articles
       </h2>
