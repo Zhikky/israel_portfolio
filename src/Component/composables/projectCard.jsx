@@ -12,7 +12,7 @@ export default function ProjectCard({
   return (
     <NavLink
       to="/portfolio/futurex"
-      style={{ color: bgColor, top: topValue }}
+      style={{ color: bgColor, top: topValue}}
       className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25 mb-17 z-5 hover:cursor-pointer`}
     >
       <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000040] bg-[#2E2E2E] rounded-[20px]">

@@ -41,7 +41,7 @@ export default function MyPortfolio() {
           description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
           bgColor="#94E1CA"
           // topValue="380px"
-          topValue="255px"
+          topValue="355px"
         />
         <ProjectCard
           projectImage={project3}
@@ -50,7 +50,7 @@ export default function MyPortfolio() {
           year="2020"
           description="A time planning and tracking app for the average millenial."
           bgColor="#9EE5FF"
-          topValue="255px"
+          topValue="455px"
         />
         <ProjectCard
           projectImage={project1}
@@ -59,7 +59,7 @@ export default function MyPortfolio() {
           year="2020"
           description="A learning & education management system to cater for the needs & flaws of the traditional education system"
           bgColor="#FFF0C1"
-          topValue="255px"
+          topValue="555px"
         />
         <ProjectCard
           projectImage={project2}
@@ -68,8 +68,7 @@ export default function MyPortfolio() {
           year="2020"
           description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
           bgColor="#94E1CA"
-          // topValue="380px"
-          topValue="255px"
+          topValue="655px"
         />
         <ProjectCard
           projectImage={project3}
@@ -78,7 +77,7 @@ export default function MyPortfolio() {
           year="2020"
           description="A time planning and tracking app for the average millenial."
           bgColor="#9EE5FF"
-          topValue="255px"
+          topValue="755px"
         />
       </div>
     </div>
