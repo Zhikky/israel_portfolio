@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
-import { useNavigationType } from "react-router-dom";
+import { useNavigationType, NavLink } from "react-router-dom";
 import Portal from "../Component/composables/Portal";
 
 // Importing composable components
@@ -236,10 +236,14 @@ export default function Home() {
               paddingTop="50px"
             />
           </div>
+          <NavLink
+            to="/portfolio/futurex"
+            className="font-geist text-base mt-12 p-4 rounded-full  text-white border-1 border-white hover:cursor-pointer hover:scale-103 duration-300"
+          >
+            Read case study
+          </NavLink>
           <Experiences />
-
           <ReferenceBoard />
-
           <Footer handleCopy={handleCopy} showCopyPopup={showCopyPopup} />
         </div>
       )}

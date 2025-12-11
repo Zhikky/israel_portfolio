@@ -10,10 +10,10 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
         Beyond The Screen
       </h1>
 
-      <div className="flex flex-col text-white items-center mt-17 w-full overflow-hidden">
-        <div className="flex w-10/12 justify-between items-center">
+      <div className="flex flex-col text-white items-center mt-17 w-full">
+        <div className="flex w-full justify-between items-center">
           <p
-            className="w-66 text-[#FFF0C1] text-xl font-covered-by-your-grace"
+            className="w-83.5 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
             // data-aos-delay="200"
             data-aos-mirror="true"
@@ -22,7 +22,7 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             in building things that matter—and serving people while at it.
           </p>
           <p
-            className="w-66 text-[#FFF0C1] text-xl font-covered-by-your-grace"
+            className="w-87 mb-6 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
             // data-aos-delay="200"
             data-aos-mirror="true"
@@ -80,9 +80,9 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
           />
         </div>
 
-        <div className="flex w-8/12 justify-between items-center mt-20 ml-90">
+        <div className="flex w-full justify-between items-center mt-2 ml-60">
           <p
-            className="w-66 text-[#FFF0C1] text-xl justify-self-center font-covered-by-your-grace"
+            className="w-83.5 text-[#FFF0C1] text-[32px] justify-self-center font-covered-by-your-grace"
             data-aos="fade-in"
             // data-aos-delay="200"
             data-aos-mirror="true"
@@ -91,7 +91,7 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             focused, and mentally strong.
           </p>
           <p
-            className="w-66 text-[#FFF0C1] text-xl font-covered-by-your-grace"
+            className="w-90 mb-40 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
             // data-aos-delay="200"
             data-aos-mirror="true"
