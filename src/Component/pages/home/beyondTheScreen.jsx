@@ -3,7 +3,7 @@ import israel2 from "../../../assets/65b0f40f48044f6dc52e517b9c124df3f252bc73.we
 import israel3 from "../../../assets/41330c92237b8efcc5c7f5f56da8493863b6d195.webp";
 import israel4 from "../../../assets/fb70702dfaeea44778fee3b338cddc65fe0129b0.webp";
 
-export default function BeyoundTheScreen() {
+export default function BeyoundTheScreen({ displayImagePopup }) {
   return (
     <section className="flex flex-col items-center justify-center max-w-[1440px] w-full pt-67 pb-48 px-37 min-h-56">
       <h1 className="font-vina-sans text-7xl tracking-tight text-white">
@@ -36,43 +36,47 @@ export default function BeyoundTheScreen() {
           <img
             src={israel4}
             alt=""
-            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute"
+            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-1"
             data-aos-duration="500"
             // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
+            onClick={() => displayImagePopup(israel4)}
           />
 
           <img
             src={israel3}
             alt=""
-            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute"
+            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-2"
             data-aos-duration="500"
             // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
+            onClick={() => displayImagePopup(israel3)}
           />
           <img
             src={israel2}
             alt=""
-            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute"
+            className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-3"
             data-aos-duration="500"
             // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
+            onClick={() => displayImagePopup(israel2)}
           />
           <img
             src={israel1}
             alt=""
-            className="w-60 h-71  shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover object-left absolute"
+            className="w-60 h-71  shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover object-left absolute cursor-pointer"
             data-aos="israel-4"
             data-aos-duration="500"
             // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
+            onClick={() => displayImagePopup(israel1)}
           />
         </div>
 

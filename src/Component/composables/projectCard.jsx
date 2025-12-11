@@ -2,36 +2,62 @@ import { NavLink } from "react-router-dom";
 
 export default function ProjectCard({
   projectImage,
-  bgColor,
+  tags,
   topValue,
   title = "Project Title",
-  highlight = "Highlight",
-  year = "2023",
   description = "This is a brief description of the project.",
+  description2,
   paddingTop,
+  height,
 }) {
+  console.log(tags);
+
   return (
-    <NavLink
-      to="/portfolio/futurex"
-      style={{ color: bgColor, top: topValue, paddingTop: paddingTop ? paddingTop : "0px" }}
-      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25  z-5 hover:cursor-pointer`}
+    <div
+      style={{
+        top: topValue,
+        height: height ? height : "auto",
+        paddingTop: paddingTop ? paddingTop : "0px",
+      }}
+      className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25  z-5 `}
     >
       <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000025] bg-[#2E2E2E] rounded-[20px]">
-        <div className="flex flex-col w-full max-w-2xl gap-10 pt-10 justify-between overflow-hidden">
-          <div className="flex justify-between items-center ">
-            <p>{title}</p>
-            <p>{highlight}</p>
-            <p>{year}</p>
-          </div>
+        <div className="flex flex-col w-full max-w-3xl gap-10 pt-10 justify-between overflow-hidden">
+          <div className="flex justify-between">
+            <div className="flex flex-col gap-2 w-80">
+              <h2 className="text-2xl pb-2 text-white font-geist font-medium">
+                {title}
+              </h2>
+              <p className="text-base leading-6 font-semibold text-[#FFF0C1]">
+                {description}
+                {description2 && (
+                  <span className="text-white font-normal">
+                    {" "}
+                    - {description2}
+                  </span>
+                )}
+              </p>
+            </div>
 
-          <div className="flex justify-between items-center">
-            <p className="text-sm font-geist w-48 text-white">{description}</p>
-            <button
-              style={{ backgroundColor: bgColor }}
-              className={`text-black text-xl px-8 py-4 font-vina-sans rounded-lg`}
-            >
-              read case study
-            </button>
+            <div className="flex flex-col gap-7.5 items-end mr-1">
+              <div className="flex gap-4 justify-between">
+                {tags.map((tag) => (
+                  <button
+                    key={tag.color}
+                    style={{ backgroundColor: tag.color }}
+                    className="text-base text-black font-vina-sans px-[10px] py-[15px] rounded-[10px] leading-none"
+                  >
+                    {tag.text}
+                  </button>
+                ))}
+              </div>
+              <NavLink
+                to="/portfolio/futurex"
+                className="font-geist text-base p-4 rounded-full text-white border-1 border-white hover:cursor-pointer hover:scale-103 duration-300"
+              >
+                Read case study
+              </NavLink>
+            </div>
           </div>
 
           <img
@@ -40,6 +66,6 @@ export default function ProjectCard({
           />
         </div>
       </div>
-    </NavLink>
+    </div>
   );
 }

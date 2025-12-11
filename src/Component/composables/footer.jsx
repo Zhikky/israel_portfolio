@@ -1,4 +1,4 @@
-export default function Footer({ handleCopy, showPopup }) {
+export default function Footer({ handleCopy, showCopyPopup }) {
   return (
     <footer className="w-full bg-[#2E2E2E] flex justify-center z-50">
       <div className="flex justify-between w-full max-w-[1440px] p-38">
@@ -33,7 +33,7 @@ export default function Footer({ handleCopy, showPopup }) {
             </svg>
 
             {/* Popup */}
-            {showPopup && (
+            {showCopyPopup && (
               <div className="absolute top-full -right-12 mt-2 px-2 py-1 bg-black text-white text-base rounded shadow-lg animate-fade">
                 Copied!
               </div>

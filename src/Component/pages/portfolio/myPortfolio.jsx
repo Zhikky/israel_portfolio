@@ -1,13 +1,13 @@
 import ProfileCard from "../../composables/profileCard";
 import ProjectCard from "../../composables/projectCard";
-import project1 from "../../../assets/projects/project1.webp";
-import project2 from "../../../assets/projects/project2.webp";
-import project3 from "../../../assets/projects/project3.webp";
-
+import testGorillaImage from "../../../assets/projects/testGorillaProjectImage.png";
+import secfixImage from "../../../assets/projects/secfixProjectImage.png";
+import futurexImage from "../../../assets/projects/futurexProjectImage.png";
+import jettifyImage from "../../../assets/projects/jettifyProjectImage.png";
+import zennorImage from "../../../assets/projects/zennorProjectImage.png";
 
 import analytics from "../../../assets/healthicons_integrated-data-and-research-24px.png";
 import pen from "../../../assets/iconoir_design-nib.png";
-
 
 export default function MyPortfolio() {
   return (
@@ -25,65 +25,111 @@ export default function MyPortfolio() {
 
       <div className="-mt-[630px] w-full">
         <ProjectCard
-          projectImage={project1}
-          title="FUTURE X"
-          highlight="UI/UX, EDUCATION, WEBAPP, VUEJS"
-          year="2020"
+          projectImage={testGorillaImage}
+          title="TESTGORILLA"
+          description="Redesigning talent cards for a skills-based sourcing experience"
+          description2="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
+          tags={[
+            {
+              text: "sass",
+              color: "#FFF0C1",
+            },
+            {
+              text: "sourcing",
+              color: "#9EE5FF",
+            },
+            {
+              text: "Redesign",
+              color: "#FFB05F",
+            },
+          ]}
+          topValue="250px"
+        />
+        <ProjectCard
+          projectImage={secfixImage}
+          title="SECFIX"
+          description="Automating Cybersecurity Compliance (Access Management Redesign)"
+          tags={[
+            {
+              text: "cyber security",
+              color: "#94E1CA",
+            },
+            {
+              text: "saas",
+              color: "#F0BFFF",
+            },
+            {
+              text: "0-1",
+              color: "#FFF0C1",
+            },
+          ]}
+          topValue="385px"
+          paddingTop="50px"
+        />
+        <ProjectCard
+          projectImage={futurexImage}
+          title="FUTUREX"
           description="A learning & education management system to cater for the needs & flaws of the traditional education system"
-          bgColor="#FFF0C1"
-          topValue="255px"
+          tags={[
+            {
+              text: "education",
+              color: "#FFF0C1",
+            },
+            {
+              text: "webapp",
+              color: "#9EE5FF",
+            },
+            {
+              text: "vuejs",
+              color: "#FFB05F",
+            },
+          ]}
+          topValue="570px"
+          paddingTop="50px"
         />
         <ProjectCard
-          projectImage={project2}
+          projectImage={jettifyImage}
           title="JETIFFY"
-          highlight="UI/UX, Ride hailing, Goods Delivery, VueJs"
-          year="2020"
           description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
-          bgColor="#94E1CA"
-          topValue="255px"
-          paddingTop="100px"
+          tags={[
+            {
+              text: "ride hailing",
+              color: "#F0BFFF",
+            },
+            {
+              text: "goods delivery",
+              color: "#FFB05F",
+            },
+            {
+              text: "mobile",
+              color: "#86FF71",
+            },
+          ]}
+          topValue="755px"
+          paddingTop="50px"
         />
         <ProjectCard
-          projectImage={project3}
-          title="REMINDR"
-          highlight="UI/UX, Time Planning, Mobile app"
-          year="2020"
-          description="A time planning and tracking app for the average millenial."
-          bgColor="#9EE5FF"
-          topValue="255px"
-          paddingTop="200px"
-        />
-        <ProjectCard
-          projectImage={project1}
-          title="FUTURE X"
-          highlight="UI/UX, EDUCATION, WEBAPP, VUEJS"
-          year="2020"
-          description="A learning & education management system to cater for the needs & flaws of the traditional education system"
-          bgColor="#FFF0C1"
-          topValue="255px"
-          paddingTop="300px"
-        />
-        <ProjectCard
-          projectImage={project2}
-          title="JETIFFY"
-          highlight="UI/UX, Ride hailing, Goods Delivery, VueJs"
-          year="2020"
-          description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
-          bgColor="#94E1CA"
-          topValue="255px"
-          paddingTop="400px"
-        />
-        <ProjectCard
-          projectImage={project3}
-          title="REMINDR"
-          highlight="UI/UX, Time Planning, Mobile app"
-          year="2020"
-          description="A time planning and tracking app for the average millenial."
-          bgColor="#9EE5FF"
-          topValue="255px"
-          paddingTop="500px"
+          projectImage={zennorImage}
+          title="ZENNOR ENERGY"
+          description="A B2B solution for gasoline distribution and record keeping."
+          tags={[
+            {
+              text: "gasoline",
+              color: "#F0BFFF",
+            },
+            {
+              text: "energy",
+              color: "#94E1CA",
+            },
+            {
+              text: "mobile",
+              color: "#C5F9FA",
+            },
+          ]}
+          topValue="1000px"
+          paddingTop="50px"
         />
       </div>
     </div>
-  )
+  );
 }

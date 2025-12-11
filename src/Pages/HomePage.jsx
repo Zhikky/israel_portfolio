@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 import { useNavigationType } from "react-router-dom";
+import Portal from "../Component/composables/Portal";
 
 // Importing composable components
 import Navbar from "../Component/composables/navbar";
@@ -14,18 +15,24 @@ import Leading from "../Component/pages/home/leading";
 import Projects from "../Component/pages/home/projects";
 import Experiences from "../Component/pages/home/experiences";
 import ProjectCard from "../Component/composables/projectCard";
-import project1 from "../assets/projects/project1.webp";
-import project2 from "../assets/projects/project2.webp";
-import project3 from "../assets/projects/project3.webp";
+import testGorillaImage from "../assets/projects/testGorillaProjectImage.png";
+import secfixImage from "../assets/projects/secfixProjectImage.png";
+import futurexImage from "../assets/projects/futurexProjectImage.png";
+import jettifyImage from "../assets/projects/jettifyProjectImage.png";
+import zennorImage from "../assets/projects/zennorProjectImage.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import ImageCardPopup from "../Component/composables/imageCardPopup";
+import ReferenceBoard from "../Component/pages/home/referencesBoard";
 // ..
 AOS.init();
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const [showCopyPopup, setshowCopyPopup] = useState(false);
+  const [showImagePopup, setShowImagePopup] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const navigationType = useNavigationType;
@@ -46,12 +53,22 @@ export default function Home() {
     navigator.clipboard
       .writeText("adetuwoisrael24@gmail.com")
       .then(() => {
-        setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 1000); // reset after 1s
+        setshowCopyPopup(true);
+        setTimeout(() => setshowCopyPopup(false), 1000); // reset after 1s
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
       });
+  };
+
+  const displayImagePopup = (imageData) => {
+    setSelectedImage(imageData);
+    setShowImagePopup(true);
+  };
+
+  const hideImagePopup = () => {
+    setShowImagePopup(false);
+    setSelectedImage(null);
   };
 
   useEffect(() => {
@@ -67,8 +84,29 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (showImagePopup) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => document.body.classList.remove("no-scroll");
+  }, [showImagePopup]);
+
   return (
-    <div>
+    <div className="relative">
+      {/* Beyond The Screen image card popup */}
+      {showImagePopup && (
+        <Portal>
+          <ImageCardPopup
+            hideImagePopup={hideImagePopup}
+            showImagePopup={showImagePopup}
+            imageData={selectedImage}
+          />
+        </Portal>
+      )}
+
       {loading ? (
         <div className="loader-container w-full h-screen flex justify-center items-center bg-[#1A1A1A]">
           <ClipLoader
@@ -81,7 +119,7 @@ export default function Home() {
           />
         </div>
       ) : (
-        <div className="relative flex flex-col items-center w-full bg-[#1A1A1A]">
+        <div className="relative flex flex-col items-center w-full bg-[#1A1A1A] z-900">
           <Navbar scrolled={scrolled} />
           <div
             style={{ backgroundColor: "#1A1A1A" }}
@@ -89,42 +127,120 @@ export default function Home() {
           >
             <HeroSection />
             <LogoCarousels />
-            <BeyoundTheScreen />
+            <BeyoundTheScreen displayImagePopup={displayImagePopup} />
             <Leading />
             <Projects />
             <ProjectCard
-              projectImage={project1}
-              title="FUTURE X"
-              highlight="UI/UX, EDUCATION, WEBAPP, VUEJS"
-              year="2020"
+              projectImage={testGorillaImage}
+              title="TESTGORILLA"
+              description="Redesigning talent cards for a skills-based sourcing experience"
+              description2="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
+              tags={[
+                {
+                  text: "sass",
+                  color: "#FFF0C1",
+                },
+                {
+                  text: "sourcing",
+                  color: "#9EE5FF",
+                },
+                {
+                  text: "Redesign",
+                  color: "#FFB05F",
+                },
+              ]}
+              topValue="115px"
+            />
+            <ProjectCard
+              projectImage={secfixImage}
+              title="SECFIX"
+              description="Automating Cybersecurity Compliance (Access Management Redesign)"
+              tags={[
+                {
+                  text: "cyber security",
+                  color: "#94E1CA",
+                },
+                {
+                  text: "saas",
+                  color: "#F0BFFF",
+                },
+                {
+                  text: "0-1",
+                  color: "#FFF0C1",
+                },
+              ]}
+              topValue="260px"
+              paddingTop="50px"
+            />
+            <ProjectCard
+              projectImage={futurexImage}
+              title="FUTUREX"
               description="A learning & education management system to cater for the needs & flaws of the traditional education system"
-              bgColor="#FFF0C1"
-              topValue="115px"
+              tags={[
+                {
+                  text: "education",
+                  color: "#FFF0C1",
+                },
+                {
+                  text: "webapp",
+                  color: "#9EE5FF",
+                },
+                {
+                  text: "vuejs",
+                  color: "#FFB05F",
+                },
+              ]}
+              topValue="455px"
+              paddingTop="50px"
             />
             <ProjectCard
-              projectImage={project2}
+              projectImage={jettifyImage}
               title="JETIFFY"
-              highlight="UI/UX, Ride hailing, Goods Delivery, VueJs"
-              year="2020"
               description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
-              bgColor="#94E1CA"
-              // topValue="380px"
-              topValue="115px"
-              paddingTop="100px"
+              tags={[
+                {
+                  text: "ride hailing",
+                  color: "#F0BFFF",
+                },
+                {
+                  text: "goods delivery",
+                  color: "#FFB05F",
+                },
+                {
+                  text: "mobile",
+                  color: "#86FF71",
+                },
+              ]}
+              topValue="655px"
+              paddingTop="50px"
             />
             <ProjectCard
-              projectImage={project3}
-              title="REMINDR"
-              highlight="UI/UX, Time Planning, Mobile app"
-              year="2020"
-              description="A time planning and tracking app for the average millenial."
-              bgColor="#9EE5FF"
-              topValue="315px"
-              paddingTop="200px"
+              projectImage={zennorImage}
+              title="ZENNOR ENERGY"
+              description="A B2B solution for gasoline distribution and record keeping."
+              tags={[
+                {
+                  text: "gasoline",
+                  color: "#F0BFFF",
+                },
+                {
+                  text: "energy",
+                  color: "#94E1CA",
+                },
+                {
+                  text: "mobile",
+                  color: "#C5F9FA",
+                },
+              ]}
+              topValue="1000px"
+              paddingTop="50px"
             />
           </div>
           <Experiences />
-          <Footer handleCopy={handleCopy} showPopup={showPopup} />
+
+          <ReferenceBoard />
+
+          <Footer handleCopy={handleCopy} showCopyPopup={showCopyPopup} />
         </div>
       )}
     </div>

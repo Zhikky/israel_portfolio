@@ -4,6 +4,32 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-8deg) scale(0.6);
+  }
+  25% {
+    transform: rotate(-6deg) scale(0.7);
+  }
+  50% {
+    transform: rotate(-4deg) scale(0.8);
+  }
+  75% {
+    transform: rotate(-2deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.animate-tilt {
+  animation: tilt 0.3s ease-in-out;
+}
+
 :root {
   box-sizing: border-box;
   background-color: #1a1a1a;
@@ -12,7 +38,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 @theme {
   --font-vina-sans: "Vina Sans", sans-serif;
@@ -26,8 +51,8 @@
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .flicking-camera {
@@ -64,3 +89,6 @@
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}

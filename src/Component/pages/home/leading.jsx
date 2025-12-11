@@ -4,7 +4,7 @@ import ProfileCard from "../../composables/profileCard";
 
 export default function Leading() {
   return (
-    <section className="flex flex-col max-w-[1440px] w-full py-60 px-37 min-h-300">
+    <section className="flex flex-col max-w-[1440px] w-full py-20 px-36 min-h-300">
       <h1 className="font-vina-sans text-7xl tracking-tight max-w-2xl text-[#FFF0C1] mb-10">
         I lead a local faith community where I teach, guide, and walk with
         people in their spiritual journeys
@@ -18,15 +18,15 @@ export default function Leading() {
       </div>
 
       <div className="flex justify-between mt-9 w-full gap-12">
-        <p className="flex-1 text-white text-[14px] font-geist">
-          I’m privileged to Pastor a local Church assembly in the city of Lagos,
-          Nigeria called “The Sent House”. I also lead an interdenominational
-          ministry (Kerusso Ministry) across 3 campuses in Nigeria where I
-          passionately teach God’s word in the demonstration of His Spirit and
-          Power as well as disciple folks who want to walk at the center of his
-          will for their lives.
+        <p className="text-white text-base font-geist">
+          I’m privileged to pastor a local Church assembly in the city of Lagos,
+          Nigeria called <span className="text-[#FFB05F]">“The Sent House”</span>. I also lead
+          an interdenominational ministry (Kerusso Ministry) across 3 campuses
+          in Nigeria where I passionately teach God’s word in the demonstration
+          of His Spirit and Power as well as disciple folks who want to walk at
+          the center of his will for their lives.
         </p>
-        <p className="flex-1 text-white text-[14px] font-geist">
+        <p className=" text-white text-base font-geist">
           My goal to see people come to the knowledge of Christ and make Him
           known to the world is what birthed Kerusso Ministry as well as other
           initiatives to ensure that believers are discipled to effectively
@@ -35,7 +35,7 @@ export default function Leading() {
           between fulfilling the assignment of the gospel given to all men while
           maintaining excellence in their secular rendeavors.
         </p>
-        <div className=" flex flex-col items-center shrink-0 grow-0 basis=[316px]">
+        <div className=" flex flex-col items-center shrink-0 grow-0 basis=[370px]">
           <iframe
             src="https://www.youtube.com/embed/U8p1aiYuPF8?si=qEiYw6AFZsyJlamm"
             // frameBorder="0"

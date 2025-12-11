@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function ExperienceCard({
   company,
+  companyFormer,
   role,
   description,
   logo,
@@ -33,7 +34,12 @@ export default function ExperienceCard({
     >
       <div className="flex flex-col gap-11 w-124 max-w-6/10">
         <div className="flex flex-col gap-1">
-          <h2 className="font-vina-sans text-4xl tracking-tight">{company}</h2>
+          <h2 className="font-vina-sans text-4xl tracking-tight">
+            {company}
+            {companyFormer && (
+              <span className="text-[#5D5D5D]"> {companyFormer}</span>
+            )}
+          </h2>
           <p className="text-base font-geist tracking-tight">{role}</p>
         </div>
 
