@@ -10,12 +10,11 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
         Beyond The Screen
       </h1>
 
-      <div className="flex flex-col text-white items-center mt-17 w-full">
+      <div className="flex flex-col text-white items-center mt-17 w-full overflow-hidden">
         <div className="flex w-full justify-between items-center">
           <p
             className="w-83.5 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
-            // data-aos-delay="200"
             data-aos-mirror="true"
           >
             My faith shapes how I lead, create, and care for people. I believe
@@ -24,7 +23,6 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
           <p
             className="w-87 mb-6 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
-            // data-aos-delay="200"
             data-aos-mirror="true"
           >
             Travel gives me perspective. Exploring new places challenges me to
@@ -39,7 +37,6 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-1"
             data-aos-duration="500"
-            // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
             onClick={() => displayImagePopup(israel4)}
@@ -51,7 +48,6 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-2"
             data-aos-duration="500"
-            // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
             onClick={() => displayImagePopup(israel3)}
@@ -62,7 +58,6 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             className="w-60 h-71 shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover absolute cursor-pointer"
             data-aos="israel-3"
             data-aos-duration="500"
-            // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
             onClick={() => displayImagePopup(israel2)}
@@ -73,27 +68,24 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
             className="w-60 h-71  shadow-[0px_4px_35px_0px_#000000BF] rounded-xl border-6 border-white object-cover object-left absolute cursor-pointer"
             data-aos="israel-4"
             data-aos-duration="500"
-            // data-aos-delay="200"
             data-aos-mirror="true"
             data-aos-easing="ease-in-out"
             onClick={() => displayImagePopup(israel1)}
           />
         </div>
 
-        <div className="flex w-full justify-between items-center mt-2 ml-60">
+        <div className="flex w-9/10 justify-between items-center mt-10 self-end z-5">
           <p
             className="w-83.5 text-[#FFF0C1] text-[32px] justify-self-center font-covered-by-your-grace"
             data-aos="fade-in"
-            // data-aos-delay="200"
             data-aos-mirror="true"
           >
             I stay consistent with fitness because it keeps me grounded,
             focused, and mentally strong.
           </p>
           <p
-            className="w-90 mb-40 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
+            className="w-90 mb-60 text-[#FFF0C1] text-[32px] font-covered-by-your-grace"
             data-aos="fade-in"
-            // data-aos-delay="200"
             data-aos-mirror="true"
           >
             Whether it’s books, podcasts, or a long reflective walk, I’m
