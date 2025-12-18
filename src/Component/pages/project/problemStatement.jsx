@@ -1,40 +1,81 @@
-import image1 from "../../../assets/projects image/image 19-2.png";
-
-export default function ProblemStatement() {
+export default function ProblemStatement({ problem }) {
   return (
-    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[1440px] px-36 mt-18">
-      <h2 className="font-vina-sans text-4xl tracking-[-2%] text-white">
-        Problem Statement
+    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
+      <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
+        {problem.headingTitle}
       </h2>
 
-      <div className="flex flex-col justify-between gap-19 w-full py-18.75 px-10 rounded-2xl bg-[#2E2E2E]">
-        <p className="text-[#FFF0C1] font-vina-sans text-6xl leading-13.75 w-133">
-          RESHAPING THE TRADITIONAL SYSTEM OF LEARNING AND EDUCATION MANAGEMENT
-          AROUND THE GLOBE
-        </p>
-
-        <div className="flex justify-between items-center">
-          <p className=" font-geist text-white text-sm w-[40%] max-w-100 text-justify">
-            The entire project lasted a period of about 3 months and is broken
-            down into 5 phases (Discovery, Problem Definition, Design, Testing &
-            Iteration, Handoff). However, the reality was there were back and
-            forth's between these phases as the entire development process was
-            in an agile environment.
+      <div
+        style={{
+          gap:
+            problem.headingTitle != "The Core Problem" ||
+            problem.headingTitle != "The Problem"
+              ? "40px"
+              : "0px",
+        }}
+        className="flex flex-col justify-between w-full py-18.75 px-32.5 rounded-2xl bg-[#2E2E2E]"
+      >
+        {problem.bodyText.paragraphTitle && (
+          <h3 className="text-[#FFF0C1] font-vina-sans text-2xl leading-[30px]">
+            {problem.bodyText.paragraphTitle}
+          </h3>
+        )}
+        {problem.headingTitle != "Challenges" && (
+          <p className="text-white font-geist text-base leading-[25px]">
+            {problem.bodyText.paragraphBody[0]}
           </p>
-          <p className=" font-geist text-white text-sm w-[40%] max-w-100 text-justify">
-            The entire project lasted a period of about 3 months and is broken
-            down into 5 phases (Discovery, Problem Definition, Design, Testing &
-            Iteration, Handoff). However, the reality was there were back and
-            forth's between these phases as the entire development process was
-            in an agile environment.
-          </p>
-        </div>
+        )}
 
-        <img
-          src={image1}
-          alt="futureX"
-          className="w-full  object-cover"
-        />
+        {problem.bodyText.listBody && (
+          <ul className="list-disc pl-6 flex flex-col gap-2">
+            {problem.bodyText.listBody.map((content, index) => (
+              <li
+                key={index}
+                className="text-white font-geist text-base leading-[25px]"
+              >
+                {content}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {problem.headingTitle == "Problem Statement" && (
+          <p className="text-white font-geist text-base leading-[25px]">
+            {problem.bodyText.paragraphBody[1]}
+          </p>
+        )}
+
+        {problem.headingTitle == "Challenges" && (
+          <div className="flex flex-col gap-10">
+            {problem.bodyText.paragraphBody.map((content, index) => (
+              <p
+                key={index}
+                className="text-white font-geist text-base leading-[25px]"
+              >
+                {content}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {problem.headingTitle == "The Core Problem" && (
+          <p className="text-[#FFF0C1] font-vina-sans mt-10 text-2xl leading-[30px]">
+            {problem.bodyText.paragraphBody[1]}
+          </p>
+        )}
+
+        {problem.bodyImg && <img className="mt-4" src={problem.bodyImg[0]} />}
+
+        {problem.quote && (
+          <div>
+            <p className="font-rethink-sans italic text-[#8E8E8E] text-[18px] font-medium leading-7.5">
+              "{problem.quote.quoteBody}"
+            </p>
+            <h3 className="font-rethink-sans italic text-white text-[18px] font-medium leading-7.5">
+              {problem.quoteTitle}
+            </h3>
+          </div>
+        )}
       </div>
     </div>
   );

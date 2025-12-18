@@ -1,17 +1,17 @@
 export default function MarketFit() {
   return (
-    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[1440px] px-36 mt-18">
-      <h2 className="font-vina-sans text-4xl tracking-[-2%] text-white">
+    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
+      <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
         Market Fit
       </h2>
 
-      <div className="flex flex-col justify-between gap-19 w-full py-18.75 px-10 rounded-2xl bg-[#2E2E2E]">
-        <p className="text-[#FFF0C1] font-vina-sans text-6xl leading-13.75 w-133">
+      <div className="flex flex-col justify-between gap-14 w-full py-18.75 px-32.5  rounded-2xl bg-[#2E2E2E]">
+        <h3 className="text-[#FFF0C1] font-vina-sans text-2xl leading-7.5">
           OUR RUDE SHOCK AND NEED FOR A REALIGNMENT
-        </p>
+        </h3>
 
-        <div className="flex justify-between">
-          <p className=" font-geist text-white text-sm w-[40%] max-w-100">
+        <div className="flex flex-col gap-8 justify-between">
+          <p className=" font-geist text-white text-base leading-[25px]">
             Development and Deployment of FutureX generally was done in an agile
             environment so the system was being deployed as design and
             development was ongoing. For the school we had most of our
@@ -20,7 +20,7 @@ export default function MarketFit() {
             acquitted with the system, catching up wasn’t so much of a problem
             for them due to mental models that had been previously established.
           </p>
-          <p className=" font-geist text-white text-sm w-[40%] max-w-100">
+          <p className=" font-geist text-white text-base leading-[25px]">
             Our deployment continued with other schools that operated almost the
             same administration and curriculum as the first school and we had
             similar results. Things however began to get interesting when we
@@ -36,14 +36,23 @@ export default function MarketFit() {
           </p>
         </div>
 
-        <div className="flex justify-between">
-          <p className=" font-vina-sans text-[#FFF0C1] text-[40px] w-[55%] tracking-[-2%]  leading-[93%]">
-            “After extensive deliberations, we decided to work on a version 2
-            for FutureX. However, we decided to have a definite user group which
-            would be government-owned academic institutions to address specific
-            problems or simplify current processes for more effective results”.
-          </p>
-          <p className=" font-geist text-white text-sm w-[40%] max-w-100">
+        <div className="flex gap-14 mt-4 justify-between">
+          <div className="flex flex-col">
+            <p className="font-geist font-bold leading-0 text-[#8E8E8E] text-4xl">
+              "
+            </p>
+            <p className="font-rethink-sans italic text-[#8E8E8E] text-base">
+              “After extensive deliberations, we decided to work on a version 2
+              for FutureX. However, we decided to have a definite user group
+              which would be government-owned academic institutions to address
+              specific problems or simplify current processes for more effective
+              results”.
+            </p>
+            <p className="font-geist font-bold text-[#8E8E8E] text-4xl self-end">
+              "
+            </p>
+          </div>
+          <p className=" font-geist text-white text-base">
             I also decided to refine the design system for the version 2 in
             order to ensure consistency in design elements, have a more
             simplistic and modern look and most of all to aid hand-off to

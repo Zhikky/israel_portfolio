@@ -9,6 +9,7 @@ export default function ProjectCard({
   description2,
   paddingTop,
   height,
+  path,
 }) {
   console.log(tags);
 
@@ -52,7 +53,7 @@ export default function ProjectCard({
                 ))}
               </div>
               <NavLink
-                to="/portfolio/futurex"
+                to={path}
                 className="font-geist text-base p-4 rounded-full text-white border-1 border-white hover:cursor-pointer hover:scale-103 duration-300"
               >
                 Read case study

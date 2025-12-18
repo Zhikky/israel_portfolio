@@ -27,6 +27,7 @@ export default function MyPortfolio() {
         <ProjectCard
           projectImage={testGorillaImage}
           title="TESTGORILLA"
+          path="testgorilla"
           description="Redesigning talent cards for a skills-based sourcing experience"
           description2="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
           tags={[
@@ -48,6 +49,7 @@ export default function MyPortfolio() {
         <ProjectCard
           projectImage={secfixImage}
           title="SECFIX"
+          path="secfix"
           description="Automating Cybersecurity Compliance (Access Management Redesign)"
           tags={[
             {
@@ -69,6 +71,7 @@ export default function MyPortfolio() {
         <ProjectCard
           projectImage={futurexImage}
           title="FUTUREX"
+          path="futurex"
           description="A learning & education management system to cater for the needs & flaws of the traditional education system"
           tags={[
             {
@@ -90,6 +93,7 @@ export default function MyPortfolio() {
         <ProjectCard
           projectImage={jettifyImage}
           title="JETIFFY"
+          path="jettify"
           description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
           tags={[
             {
@@ -111,6 +115,7 @@ export default function MyPortfolio() {
         <ProjectCard
           projectImage={zennorImage}
           title="ZENNOR ENERGY"
+          path="zennor-energy"
           description="A B2B solution for gasoline distribution and record keeping."
           tags={[
             {
