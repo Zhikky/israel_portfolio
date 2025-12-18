@@ -37,7 +37,10 @@ export default function ExperienceCard({
           <h2 className="font-vina-sans text-4xl tracking-tight">
             {company}
             {companyFormer && (
-              <span className="text-[#5D5D5D]"> {companyFormer}</span>
+              <span style={{ color: isInside ? "#FFFFFF63" : "#5D5D5D" }}>
+                {" "}
+                {companyFormer}
+              </span>
             )}
           </h2>
           <p className="text-base font-geist tracking-tight">{role}</p>
@@ -60,6 +63,14 @@ export default function ExperienceCard({
           className="w-23 z-2 shadow h-23 object-contain rounded-3xl absolute pointer-events-none transition-transform rotate-12 duration-100"
         />
       )}
+      
+      <img
+        src={logo}
+        alt=""
+        style={{
+        }}
+        className="w-23 z-2 shadow h-23 object-contain rounded-3xl pointer-events-none "
+      />
     </div>
   );
 }

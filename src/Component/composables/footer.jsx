@@ -1,6 +1,9 @@
 export default function Footer({ handleCopy, showCopyPopup }) {
   return (
-    <footer className="w-full bg-[#2E2E2E] flex justify-center z-50">
+    <footer
+      id="footer"
+      className="w-full bg-[#2E2E2E] flex justify-center z-50"
+    >
       <div className="flex justify-between w-full max-w-[1440px] p-38">
         <div className="flex flex-col w-7/10 gap-14">
           <p className="text-white text-2xl font-geist w-8/10">
@@ -47,7 +50,7 @@ export default function Footer({ handleCopy, showCopyPopup }) {
 
         <div className="flex flex-col items-left gap-14 w-39">
           <a
-            href=""
+            href="https://www.linkedin.com/in/israeladetuwo?originalSubdomain=ng"
             target="_blank"
             className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
           >
@@ -58,7 +61,7 @@ export default function Footer({ handleCopy, showCopyPopup }) {
             </div>
           </a>
           <a
-            href=""
+            href="https://www.behance.net/israeladetuwo?"
             target="_blank"
             className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
           >
@@ -69,7 +72,7 @@ export default function Footer({ handleCopy, showCopyPopup }) {
             </div>
           </a>
           <a
-            href=""
+            href="https://www.instagram.com/israel_detuwo/"
             target="_blank"
             className="flex rounded-[28px] bg-white p-1 h-fit w-fit"
           >

@@ -18,8 +18,6 @@ import ProjectCard from "../Component/composables/projectCard";
 import testGorillaImage from "../assets/projects/testGorillaProjectImage.png";
 import secfixImage from "../assets/projects/secfixProjectImage.png";
 import futurexImage from "../assets/projects/futurexProjectImage.png";
-import jettifyImage from "../assets/projects/jettifyProjectImage.png";
-import zennorImage from "../assets/projects/zennorProjectImage.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -137,7 +135,7 @@ export default function Home() {
               description2="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
               tags={[
                 {
-                  text: "sass",
+                  text: "saas",
                   color: "#FFF0C1",
                 },
                 {
@@ -169,7 +167,7 @@ export default function Home() {
                   color: "#FFF0C1",
                 },
               ]}
-              topValue="260px"
+              topValue="300px"
               paddingTop="50px"
             />
             <ProjectCard
@@ -193,54 +191,12 @@ export default function Home() {
               topValue="455px"
               paddingTop="50px"
             />
-            <ProjectCard
-              projectImage={jettifyImage}
-              title="JETIFFY"
-              description="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
-              tags={[
-                {
-                  text: "ride hailing",
-                  color: "#F0BFFF",
-                },
-                {
-                  text: "goods delivery",
-                  color: "#FFB05F",
-                },
-                {
-                  text: "mobile",
-                  color: "#86FF71",
-                },
-              ]}
-              topValue="655px"
-              paddingTop="50px"
-            />
-            <ProjectCard
-              projectImage={zennorImage}
-              title="ZENNOR ENERGY"
-              description="A B2B solution for gasoline distribution and record keeping."
-              tags={[
-                {
-                  text: "gasoline",
-                  color: "#F0BFFF",
-                },
-                {
-                  text: "energy",
-                  color: "#94E1CA",
-                },
-                {
-                  text: "mobile",
-                  color: "#C5F9FA",
-                },
-              ]}
-              topValue="1000px"
-              paddingTop="50px"
-            />
           </div>
           <NavLink
-            to="/portfolio/futurex"
-            className="font-geist text-base mt-12 p-4 rounded-full  text-white border-1 border-white hover:cursor-pointer hover:scale-103 duration-300"
+            to="/portfolio"
+            className="mt-14 rounded-[50px] text-white border-2 border-white py-5 px-8 text-base leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200"
           >
-            Read case study
+            View more projects
           </NavLink>
           <Experiences />
           <ReferenceBoard />

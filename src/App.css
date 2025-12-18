@@ -26,6 +26,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 .animate-tilt {
   animation: tilt 0.3s ease-in-out;
 }

@@ -6,7 +6,7 @@ export default function Navbar({ scrolled }) {
     <div
       style={{
         backgroundColor: scrolled ? "#242424" : "#00000033",
-        top: scrolled ? "18px" : "72px",
+        top: scrolled ? "18px" : "18px",
       }}
       className={`flex sticky z-50 justify-between items-center duration-300 py-4 px-6 rounded-4xl max-w-[1440px] w-8/10 h-24 
      backdrop-blur-sm`}
@@ -54,7 +54,7 @@ export default function Navbar({ scrolled }) {
           )}
         </NavLink>
         <a
-          to="#"
+          href="#footer"
           className="inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative group"
         >
           contact
@@ -76,9 +76,13 @@ export default function Navbar({ scrolled }) {
           />
         </a>
       </div>
-      <button className="rounded-2xl py-6 px-8 bg-[#94E1CA] text-base leading-none cursor-pointer">
+      <a
+        href="mailto:adetuwoisrael24@gmail.com"
+        target="_blank"
+        className="rounded-2xl py-6 px-8 bg-[#94E1CA] text-base leading-none cursor-pointer"
+      >
         Get in touch
-      </button>
+      </a>
     </div>
   );
 }

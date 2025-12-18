@@ -22,14 +22,14 @@ export default function ProjectCard({
       }}
       className={`w-full sticky flex flex-col items-center justify-between h-162  px-36.25  z-5 `}
     >
-      <div className="w-full max-w-[1142px] flex flex-col items-center justify-between shadow-[0px_-7px_10px_0px_#00000025] bg-[#2E2E2E] rounded-[20px]">
+      <div className="w-full max-w-[1142px] flex flex-col items-center justify-between border-2 border-[#1A1A1A] bg-[#2E2E2E] rounded-[20px]">
         <div className="flex flex-col w-full max-w-3xl gap-10 pt-10 justify-between overflow-hidden">
           <div className="flex justify-between">
             <div className="flex flex-col gap-2 w-80">
               <h2 className="text-2xl pb-2 text-white font-geist font-medium">
                 {title}
               </h2>
-              <p className="text-base leading-6 font-semibold text-[#FFF0C1]">
+              <p className="text-base font-geist leading-6 font-semibold text-[#FFF0C1]">
                 {description}
                 {description2 && (
                   <span className="text-white font-normal">
@@ -54,10 +54,11 @@ export default function ProjectCard({
               </div>
               <NavLink
                 to={path}
-                className="font-geist text-base p-4 rounded-full text-white border-1 border-white hover:cursor-pointer hover:scale-103 duration-300"
+                className="mt-6 rounded-[50px] text-white border-2 border-white py-5 px-8 text-base leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200"
               >
                 Read case study
               </NavLink>
+              
             </div>
           </div>
 

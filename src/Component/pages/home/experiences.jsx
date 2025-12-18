@@ -22,7 +22,7 @@ export default function Experiences() {
 
       <div className="flex flex-col z-10 w-full mt-[-4px] rounded-3xl overflow-hidden">
         <ExperienceCard
-          company="test gorilla , Amsterdam"
+          company="Testgorilla , Amsterdam"
           role="Product Designer  | 2022 - Present"
           description="I designed the V2 of the Code-runner which increased candidate satisfaction by 20% over 3 months. I’m currently designing the experience for the Candidate Environment of the TG WebApp. "
           logo={testGorilla}
