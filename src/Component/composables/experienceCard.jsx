@@ -64,13 +64,13 @@ export default function ExperienceCard({
         />
       )}
       
-      <img
+      {!isInside && <img
         src={logo}
         alt=""
         style={{
         }}
         className="w-23 z-2 shadow h-23 object-contain rounded-3xl pointer-events-none "
-      />
+      />}
     </div>
   );
 }
