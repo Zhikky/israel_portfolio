@@ -35,7 +35,7 @@ import Reflections from "../Component/pages/project/reflections";
 import InitialApproach from "../Component/pages/project/initialApproach";
 import ResearchPivot from "../Component/pages/project/researchPivot";
 import UsabilityTestingResults from "../Component/pages/project/usabilityTestingResults";
-import FutureXConclusion from "../Component/pages/project/FutureXConclusion";
+import FutureXConclusion from "../Component/pages/project/futureXConclusion";
 import ResearchProcess from "../Component/pages/project/researchProcess";
 import OnboardingScreens from "../Component/pages/project/Jettify/onboardingScreens";
 import LoginSignupScreens from "../Component/pages/project/Jettify/loginSignupScreens";
@@ -251,13 +251,13 @@ export default function CaseStudies() {
           {data.projectName == "Jettify" && <OtherScreens />}
 
           {data.projectName == "Jettify" && <DarkMode />}
- 
+
           {data.projectName == "Zennor Energy" && <MediumFidelity />}
- 
+
           {data.projectName == "Zennor Energy" && <StyleGuide />}
- 
+
           {data.projectName == "Zennor Energy" && <HighFidelity />}
- 
+
           <Pagination
             prevPageContent={prevPageContent}
             nextPageContent={nextPageContent}
