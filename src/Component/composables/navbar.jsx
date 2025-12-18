@@ -65,7 +65,7 @@ export default function Navbar({ scrolled }) {
           />
         </a>
         <a
-          href="public/Israel Adetuwo's Resume.pdf"
+          href="/IsraelAdetuwo'sResume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative group"
