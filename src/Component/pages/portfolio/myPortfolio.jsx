@@ -11,19 +11,19 @@ import pen from "../../../assets/iconoir_design-nib.png";
 
 export default function MyPortfolio() {
   return (
-    <div className="w-full flex flex-col items-center justify-center relative h-fit ">
-      <h1 className="sticky top-20 w-fit text-white font-vina-sans text-[12rem] tracking-tight leading-[180px] pb-[630px]">
-        <div className="z-0 text-black tracking-normal absolute -left-[240px] top-[78px] rotate-[12deg] hover:rotate-0 cursor-pointer duration-200 ">
+    <div className="w-full flex flex-col pt-60 items-center justify-center relative h-fit ">
+      <h1 className="-mb-4 relative text-center w-fit text-white font-vina-sans text-[12rem] tracking-tight leading-[180px]">
+        <div className="z-0 text-black tracking-normal absolute -left-55 top-[78px] rotate-[12deg] hover:rotate-0 cursor-pointer duration-200 ">
           <ProfileCard role="Product Designer" color="#9EE5FF" icon={pen} />
         </div>
         My Portfolio
-        <div className="z-20 text-black tracking-normal absolute right-[-200px] top-[78px] -rotate-[16deg] hover:rotate-0 cursor-pointer duration-200 ">
+        <div className="z-20 text-black tracking-normal absolute -right-55 top-[78px] -rotate-[16deg] hover:rotate-0 cursor-pointer duration-200 ">
           <ProfileCard role="UX Strategist" color="#FFF0C1" icon={analytics} />
         </div>
       </h1>
       {/* </div> */}
 
-      <div className="-mt-[630px] w-full">
+
         <ProjectCard
           projectImage={testGorillaImage}
           title="TESTGORILLA"
@@ -44,7 +44,6 @@ export default function MyPortfolio() {
               color: "#FFB05F",
             },
           ]}
-          topValue="250px"
         />
         <ProjectCard
           projectImage={secfixImage}
@@ -65,7 +64,6 @@ export default function MyPortfolio() {
               color: "#FFF0C1",
             },
           ]}
-          topValue="385px"
           paddingTop="50px"
         />
         <ProjectCard
@@ -87,7 +85,6 @@ export default function MyPortfolio() {
               color: "#FFB05F",
             },
           ]}
-          topValue="570px"
           paddingTop="50px"
         />
         <ProjectCard
@@ -109,7 +106,6 @@ export default function MyPortfolio() {
               color: "#86FF71",
             },
           ]}
-          topValue="755px"
           paddingTop="50px"
         />
         <ProjectCard
@@ -131,10 +127,10 @@ export default function MyPortfolio() {
               color: "#C5F9FA",
             },
           ]}
-          topValue="1000px"
+          
           paddingTop="50px"
         />
-      </div>
+      
     </div>
   );
 }

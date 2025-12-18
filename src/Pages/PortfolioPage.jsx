@@ -62,7 +62,6 @@ export default function PortfolioPage() {
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A]">
           <Navbar scrolled={scrolled} />
-          <div className="w-full max-w-[1440px] h-120"></div>
           
           <MyPortfolio />
 
