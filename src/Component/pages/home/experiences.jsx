@@ -67,7 +67,7 @@ export default function Experiences() {
         />
         <ExperienceCard
           company="vencru hq, USA"
-          role="Product Designer  | 2022 - Present"
+          role="Product Designer  | 2019 - 2020"
           logo={vencru}
           bgColor="#2C74DA"
         />

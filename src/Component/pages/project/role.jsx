@@ -1,4 +1,30 @@
 export default function RoleCollab({ roleCollab }) {
+  const parseText = (text) => {
+    const parts = text.split(/(\[\[highlight\]\]|\[\[\/highlight\]\])/);
+    let isHighlight = false;
+
+    return parts.map((part, index) => {
+      if (part === "[[highlight]]") {
+        isHighlight = true;
+        return null;
+      }
+
+      if (part === "[[/highlight]]") {
+        isHighlight = false;
+        return null;
+      }
+
+      return (
+        <span
+          key={index}
+          className={isHighlight ? "font-semibold text-[#FFF0C1]" : ""}
+        >
+          {part}
+        </span>
+      );
+    });
+  };
+
   return (
     <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
       <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
@@ -28,7 +54,7 @@ export default function RoleCollab({ roleCollab }) {
               key={index}
               className="text-white font-geist text-base leading-[25px]"
             >
-              {content}
+              {parseText(content)}
             </li>
           ))}
         </ul>

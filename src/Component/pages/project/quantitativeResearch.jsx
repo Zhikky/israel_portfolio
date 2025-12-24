@@ -1,4 +1,30 @@
 export default function QuantitativeResearch({ quantitativeResearch }) {
+   const parseText = (text) => {
+     const parts = text.split(/(\[\[highlight2\]\]|\[\[\/highlight2\]\])/);
+     let isHighlight = false;
+
+     return parts.map((part, index) => {
+       if (part === "[[highlight2]]") {
+         isHighlight = true;
+         return null;
+       }
+
+       if (part === "[[/highlight2]]") {
+         isHighlight = false;
+         return null;
+       }
+
+       return (
+         <span
+           key={index}
+           className={isHighlight ? "font-semibold text-[#FFB05F]" : ""}
+         >
+           {part}
+         </span>
+       );
+     });
+   };
+  
   return (
     <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
       <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
@@ -7,7 +33,7 @@ export default function QuantitativeResearch({ quantitativeResearch }) {
 
       <div className="flex flex-col justify-between gap-10 w-full py-18.75 px-32.5  rounded-2xl bg-[#2E2E2E]">
         <p className="text-[#FFB05F] font-geist text-base leading-[25px] font-bold">
-          {quantitativeResearch.bodyText.paragraphBody[0]}
+          {parseText(quantitativeResearch.bodyText.paragraphBody[0])}
         </p>
         <div className="flex flex-col gap-2">
           {quantitativeResearch.bodyText.listBody.map((content, index) => (

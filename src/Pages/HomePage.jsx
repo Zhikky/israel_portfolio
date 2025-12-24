@@ -131,6 +131,7 @@ export default function Home() {
             <ProjectCard
               projectImage={testGorillaImage}
               title="TESTGORILLA"
+              path="testgorilla"
               description="Redesigning talent cards for a skills-based sourcing experience"
               tags={[
                 {
@@ -151,6 +152,7 @@ export default function Home() {
             <ProjectCard
               projectImage={secfixImage}
               title="SECFIX"
+              path="secfix"
               description="Automating Cybersecurity Compliance (Access Management Redesign)"
               tags={[
                 {
@@ -172,6 +174,7 @@ export default function Home() {
             <ProjectCard
               projectImage={futurexImage}
               title="FUTUREX"
+              path="futurex"
               description="A learning & education management system to cater for the needs & flaws of the traditional education system"
               tags={[
                 {

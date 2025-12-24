@@ -42,7 +42,7 @@ export default function ProjectCard({
             </div>
 
             <div className="flex justify-between items-center w-full">
-              <p className="text-base font-geist w-80 leading-6 font-semibold text-[#FFF0C1]">
+              <p className="text-base font-geist w-[55%] leading-6 font-semibold text-[#FFF0C1]">
                 {description}
                 {description2 && (
                   <span className="text-white font-normal">

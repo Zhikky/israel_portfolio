@@ -31,7 +31,7 @@ export default function MyPortfolio() {
           description="Redesigning talent cards for a skills-based sourcing experience"
           tags={[
             {
-              text: "sass",
+              text: "saas",
               color: "#FFF0C1",
             },
             {

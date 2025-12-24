@@ -130,8 +130,8 @@ const projects = [
     overview: {
       title: "Overview",
       body: [
-        "Talent Cards are central to how TestGorilla customers review and invite candidates. Over time, the existing design became difficult to scan, visually unbalanced, and failed to support our core value: skills-based, bias-minimized candidate evaluation",
-        "I led a three-week research and design initiative to reimagine this experience. The result: a redesigned Talent Card system grounded in user insights, validated through qualitative and quantitative research, and aligned with technical and brand direction. Within three months of launch, the redesign drove measurable improvements in user engagement and invite conversion.",
+        "Talent Cards are central to how TestGorilla customers review and invite candidates. Over time, the existing design became difficult to scan, visually unbalanced, and failed to support our core value: [[highlight]]skills-based, bias-minimized candidate evaluation[[/highlight]]",
+        "I led a three-week research and design initiative to reimagine this experience. The result: [[highlight]]a redesigned Talent Card system[[/highlight]] grounded in user insights, validated through qualitative and quantitative research, and aligned with technical and brand direction. Within three months of launch, the redesign drove measurable improvements in user engagement and invite conversion.",
       ],
       img: [testGorillaImage],
     },
@@ -165,12 +165,12 @@ const projects = [
           "I kept teams aligned through regular Slack updates, design reviews, and documentation.",
         ],
         listBody: [
-          "Product Manager— scope, priority, and alignment",
-          "UX Researcher — research planning, recruitment, and co-synthesis",
-          "Rest of the UX Team — exploration, critique, and collaborative ideation",
-          "Engineering Manager — feasibility, data constraints, and implementation considerations",
-          "Marketing Designer — avatar system exploration",
-          "Leadership (ExCo) — final review and signoff",
+          "[[highlight]]Product Manager[[/highlight]]— scope, priority, and alignment",
+          "[[highlight]]UX Researcher[[/highlight]] — research planning, recruitment, and co-synthesis",
+          "[[highlight]]Rest of the UX Team[[/highlight]] — exploration, critique, and collaborative ideation",
+          "[[highlight]]Engineering Manager[[/highlight]] — feasibility, data constraints, and implementation considerations",
+          "[[highlight]]Marketing Designer[[/highlight]] — avatar system exploration",
+          "[[highlight]]Leadership (ExCo)[[/highlight]] — final review and signoff",
         ],
       },
       bodyImg: [roleCollabImg1, roleCollabImg2, roleCollabImg3],
@@ -191,7 +191,7 @@ const projects = [
           "Contextual experience increases trust",
           "Salary, location, and work preference signals significantly influence decisions",
           "Self-declared skills matter only when tied to experience",
-          "Personality summaries have low influence on invite decisions",
+          "Personality summaries [[highlight2]]have low influence on invite decisions[[/highlight2]]",
         ],
       },
       quote: {
@@ -199,7 +199,15 @@ const projects = [
       },
       hierachy: {
         title: "The UI should reflect this hierarchy:",
-        body: ["Verified Skills", "↓", "Essential Metadata", "↓", "Experience Context", "↓", "Optional Signals"],
+        body: [
+          "Verified Skills",
+          "↓",
+          "Essential Metadata",
+          "↓",
+          "Experience Context",
+          "↓",
+          "Optional Signals",
+        ],
       },
     },
     conceptDevelopment: {
@@ -225,7 +233,7 @@ const projects = [
       headingTitle: "Qualitative Research (Customer Interviews)",
       bodyText: {
         paragraphBody: [
-          "We conducted six in-depth interviews with recruiters and hiring managers. Feedback was consistent:",
+          "[[highlight2]]We conducted six in-depth interviews with recruiters and hiring managers. Feedback was consistent:[[/highlight2]]",
         ],
         listBody: [
           {
@@ -265,7 +273,7 @@ const projects = [
       headingTitle: "Quantitative Research (Maze Study)",
       bodyText: {
         paragraphBody: [
-          "We validated qualitative insights with two Maze studies (100 participants total). Results were clear:",
+          "[[highlight2]]We validated qualitative insights with two Maze studies (100 participants total). Results were clear:[[/highlight2]]",
           "This alignment between qualitative and quantitative data strengthened our confidence.",
         ],
         listBody: [
@@ -430,8 +438,8 @@ const projects = [
     overview: {
       title: "Overview",
       body: [
-        "Secfix is a cybersecurity compliance platform that automates workflows for achieving and maintaining certifications like ISO 27001, SOC 2, and GDPR. Compliance traditionally requires extensive manual work, lengthy audit preparation, and constant cross-departmental coordination.",
-        "I was the Founding Product Designer, working alongside a UX researcher, CTO, developers, and sales/marketing teams.",
+        "Secfix is a cybersecurity compliance platform that automates workflows for achieving and maintaining certifications like [[highlight]]ISO 27001, SOC 2,[[/highlight]] and [[highlight]]GDPR[[/highlight]]. Compliance traditionally requires extensive manual work, lengthy audit preparation, and constant cross-departmental coordination.",
+        "I was the [[highlight]]Founding Product Designer[[/highlight]], working alongside a UX researcher, CTO, developers, and sales/marketing teams.",
       ],
       img: [secfixOverviewImage],
     },
@@ -472,7 +480,7 @@ const projects = [
       headingTitle: "The Initial Approach—And Why It Failed",
       bodyText: {
         paragraphBody: [
-          "To move quickly, the first iteration of Access Management was designed primarily through competitor analysis (Vanta, Drata). This gave us a baseline for:",
+          "To move quickly, the first iteration of Access Management was designed primarily through [[highlight2]]competitor analysis (Vanta, Drata)[[/highlight2]]. This gave us a baseline for:",
           "However, usability testing revealed a critical issue. Customers said:",
         ],
         listBody: [
@@ -599,9 +607,9 @@ const projects = [
         listBody: [
           {
             list: [
-              "Employee onboarding time cut from 6 hours to 2 hours",
-              "Clearer compliance workflows improved audit readiness",
-              "Higher customer satisfaction and increased product trust",
+              "Employee onboarding time cut from [[highlight2]]6 hours to 2 hours[[/highlight2]]",
+              "Clearer compliance workflows [[highlight2]]improved audit readiness[[/highlight2]]",
+              "Higher customer satisfaction and [[highlight2]]increased product trust[[/highlight2]]",
             ],
           },
         ],
@@ -950,7 +958,6 @@ const projects = [
       ],
       bodyImg: [businessResearch1, businessResearch2],
     },
-
     wireFrames: {
       headingTitle: "Low Fidelity (sketches)",
       bodyImg: [wireframe1, wireframe3, wireframe4, wireframe5, wireframe2],

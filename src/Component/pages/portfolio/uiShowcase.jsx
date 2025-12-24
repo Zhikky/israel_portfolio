@@ -23,8 +23,8 @@ export default function UiShowcase() {
   const paginationRef = useRef(null);
 
   return (
-    <div className="flex flex-col relative justify-between gap-4 w-full h-fit max-w-[1140px] mt-75 mb-60">
-      <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
+    <div className="flex flex-col relative justify-between gap-16 w-full h-fit max-w-[1140px] mt-75 mb-60">
+      <h2 className="font-vina-sans text-4xl tracking-[-2%] text-white">
         UI Showcase
       </h2>
 

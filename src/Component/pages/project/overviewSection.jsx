@@ -1,6 +1,31 @@
-
 export default function OverviewSection({ overview }) {
   const bodyText = overview.body;
+
+  const parseText = (text) => {
+    const parts = text.split(/(\[\[highlight\]\]|\[\[\/highlight\]\])/);
+    let isHighlight = false;
+
+    return parts.map((part, index) => {
+      if (part === "[[highlight]]") {
+        isHighlight = true;
+        return null;
+      }
+
+      if (part === "[[/highlight]]") {
+        isHighlight = false;
+        return null;
+      }
+
+      return (
+        <span
+          key={index}
+          className={isHighlight ? "font-semibold text-[#FFF0C1]" : ""}
+        >
+          {part}
+        </span>
+      );
+    });
+  };
 
   return (
     <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
@@ -23,7 +48,7 @@ export default function OverviewSection({ overview }) {
               key={index}
               className="text-white font-geist text-base leading-[25px]"
             >
-              {text}
+              {parseText(text)}
             </p>
           ))}
         </div>
