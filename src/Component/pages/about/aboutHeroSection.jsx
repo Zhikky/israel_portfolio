@@ -2,7 +2,7 @@ import israel from "../../../../src/assets/IMG-20250813-WA0031 2.webp";
 
 export default function AboutHeroSection() {
   return (
-    <section className="flex flex-col items-center w-full max-w-[1440px] mt-60 mb-41 px-36">
+    <section className="flex flex-col items-center w-full max-w-[1440px] mt-23.25 mb-41 px-36">
       <img src={israel} alt="" className="w-74 h-auto -mb-16 z-3" />
 
       <div className="flex flex-col w-full px-21 pt-25 pb-24.75 rounded-[20px] bg-[#2E2E2E]">
@@ -13,7 +13,7 @@ export default function AboutHeroSection() {
             <br /> Strategist
           </h1>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col w-[42.75%]">
             <p className="text-white text-[18px] font-geist">
               I am a Product Designer with over 7 years of experience in
               designing digital products. I have a knack for solving complex
@@ -39,11 +39,14 @@ export default function AboutHeroSection() {
             recognizing user needs and solving them while catering to business
             and stakeholder expectations or projections.
           </p>
-          <p className="text-white text-[18px] font-geist w-2/5">
-            With a background in Brand Identity and Marketing design, I’ve
-            evolved from working in generalist design settings to being a lot
-            more research and data driven in my approach to delivering value in
-            UX Design.
+          <p className="text-white text-[18px] font-geist w-[42.75%]">
+            With a background in{" "}
+            <span className="text-[#FFB05F] font-bold">
+              Brand Identity and Marketing design,
+            </span>{" "}
+            I’ve evolved from working in generalist design settings to being a
+            lot more research and data driven in my approach to delivering value
+            in UX Design.
           </p>
         </div>
 

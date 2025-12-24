@@ -1,6 +1,8 @@
 import preaching from "../../../assets/Group 9 (1).webp";
 import youtube from "../../../assets/youtube_logo.png";
 import ProfileCard from "../../composables/profileCard";
+import { NavLink } from "react-router-dom";
+
 
 export default function Leading() {
   return (
@@ -20,7 +22,8 @@ export default function Leading() {
       <div className="flex justify-between mt-9 w-full gap-12">
         <p className="text-white text-base font-geist">
           I’m privileged to pastor a local Church assembly in the city of Lagos,
-          Nigeria called <span className="text-[#FFB05F]">“The Sent House”</span>. I also lead
+          Nigeria called{" "}
+          <span className="text-[#FFB05F]">“The Sent House”</span>. I also lead
           an interdenominational ministry (Kerusso Ministry) across 3 campuses
           in Nigeria where I passionately teach God’s word in the demonstration
           of His Spirit and Power as well as disciple folks who want to walk at
@@ -51,6 +54,13 @@ export default function Leading() {
           </div>
         </div>
       </div>
+
+      <NavLink
+        to="/about"
+        className="mt-5.25 rounded-[50px] text-white border-2 border-white py-6 px-8 text-lg leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200 hover:bg-white hover:text-black"
+      >
+        Get to know me
+      </NavLink>
     </section>
   );
 }

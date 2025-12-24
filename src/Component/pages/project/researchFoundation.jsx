@@ -35,7 +35,7 @@ export default function ResearchFoundation({ researchFoundation }) {
           </div>
         )}
 
-        <div>
+        <div className="self-center">
           <p className="font-rethink-sans italic text-[#8E8E8E] text-[18px] font-medium leading-7.5">
             "{researchFoundation.quote.quoteBody}"
           </p>
@@ -46,13 +46,15 @@ export default function ResearchFoundation({ researchFoundation }) {
           )}
         </div>
 
-        <div>
+        <div className="self-center flex -mt-4 flex-col gap-4">
           <h3 className="font-vina-sans text-3xl -tracking-[0.04em] text-[#FFF0C1] leading-10.25">
             {researchFoundation.hierachy.title}
           </h3>
-          <h3 className="font-vina-sans text-3xl -tracking-[0.04em] text-white leading-10.25">
-            {researchFoundation.hierachy.body}
-          </h3>
+          <div className="font-vina-sans flex flex-col items-center gap-2.75 text-3xl -tracking-[0.04em] text-white leading-6.75">
+            {researchFoundation.hierachy.body.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

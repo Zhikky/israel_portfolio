@@ -75,16 +75,16 @@ export default function CaseStudies() {
       setData(foundProject);
       setCurrentPage(foundProject.id);
 
-      if (currentPage <= projects.length) {
+      if (currentPage < projects.length) {
         setNextPageContent(projects[currentPage]);
       } else {
-        setNextPageContent(null);
+        setNextPageContent(projects[0]);
       }
 
       if (currentPage > 1) {
         setPrevPageContent(projects[prevPage]);
       } else {
-        setPrevPageContent(null);
+        setPrevPageContent(projects[4]);
       }
     }
   }, [params.caseStudyId, currentPage]);

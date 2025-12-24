@@ -199,7 +199,7 @@ const projects = [
       },
       hierachy: {
         title: "The UI should reflect this hierarchy:",
-        body: "Verified Skills → Essential Metadata → Experience Context → Optional Signals",
+        body: ["Verified Skills", "↓", "Essential Metadata", "↓", "Experience Context", "↓", "Optional Signals"],
       },
     },
     conceptDevelopment: {

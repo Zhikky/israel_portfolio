@@ -132,7 +132,6 @@ export default function Home() {
               projectImage={testGorillaImage}
               title="TESTGORILLA"
               description="Redesigning talent cards for a skills-based sourcing experience"
-              description2="A multi-service app primarily for ride-hailing and goods delivery/tracking perfect for the digital age."
               tags={[
                 {
                   text: "saas",
@@ -167,7 +166,7 @@ export default function Home() {
                   color: "#FFF0C1",
                 },
               ]}
-              topValue="300px"
+              topValue="270px"
               paddingTop="50px"
             />
             <ProjectCard
@@ -194,7 +193,7 @@ export default function Home() {
           </div>
           <NavLink
             to="/portfolio"
-            className="mt-14 rounded-[50px] text-white border-2 border-white py-5 px-8 text-base leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200"
+            className="mt-14 rounded-[50px] text-white border-2 border-white py-6 px-8 text-lg leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200 hover:bg-white hover:text-black"
           >
             View more projects
           </NavLink>

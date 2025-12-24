@@ -11,7 +11,6 @@ export default function ProjectCard({
   height,
   path,
 }) {
-  console.log(tags);
 
   return (
     <div
@@ -24,23 +23,11 @@ export default function ProjectCard({
     >
       <div className="w-full max-w-[1142px] flex flex-col items-center justify-between border-2 border-[#1A1A1A] bg-[#2E2E2E] rounded-[20px]">
         <div className="flex flex-col w-full max-w-3xl gap-10 pt-10 justify-between overflow-hidden">
-          <div className="flex justify-between">
-            <div className="flex flex-col gap-2 w-80">
-              <h2 className="text-2xl pb-2 text-white font-geist font-medium">
+          <div className="flex flex-col gap-6.5 justify-between">
+            <div className="flex justify-between items-center w-full">
+              <h2 className="text-2xl pb-2 text-white leading-none font-geist font-medium">
                 {title}
               </h2>
-              <p className="text-base font-geist leading-6 font-semibold text-[#FFF0C1]">
-                {description}
-                {description2 && (
-                  <span className="text-white font-normal">
-                    {" "}
-                    - {description2}
-                  </span>
-                )}
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-7.5 items-end mr-1">
               <div className="flex gap-4 justify-between">
                 {tags.map((tag) => (
                   <button
@@ -52,13 +39,24 @@ export default function ProjectCard({
                   </button>
                 ))}
               </div>
+            </div>
+
+            <div className="flex justify-between items-center w-full">
+              <p className="text-base font-geist w-80 leading-6 font-semibold text-[#FFF0C1]">
+                {description}
+                {description2 && (
+                  <span className="text-white font-normal">
+                    {" "}
+                    - {description2}
+                  </span>
+                )}
+              </p>
               <NavLink
                 to={path}
-                className="mt-6 rounded-[50px] text-white border-2 border-white py-5 px-8 text-base leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200"
+                className="rounded-[50px] text-white border-2 border-white py-6 px-8 text-lg leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200 hover:bg-white hover:text-black"
               >
                 Read case study
               </NavLink>
-              
             </div>
           </div>
 

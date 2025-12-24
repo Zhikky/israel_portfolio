@@ -8,6 +8,7 @@ import MyPortfolio from "../Component/pages/portfolio/myPortfolio";
 import UxResearch from "../Component/pages/portfolio/uxResearch";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import UiShowcase from "../Component/pages/portfolio/uiShowcase";
 
 // ..
 AOS.init();
@@ -62,10 +63,12 @@ export default function PortfolioPage() {
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A]">
           <Navbar scrolled={scrolled} />
-          
+
           <MyPortfolio />
 
           <UxResearch />
+
+          <UiShowcase />
 
           <Footer handleCopy={handleCopy} showPopup={showPopup} />
         </div>

@@ -36,7 +36,10 @@ export default function HeroSection() {
               that clarity, craft, and conviction should guide how we live and
               work.
             </p>
-            <NavLink to="/portfolio" className="mt-6 rounded-[50px] text-white border-2 border-white py-5 px-8 text-base leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200">
+            <NavLink
+              to="/portfolio"
+              className="mt-5.25 rounded-[50px] text-white border-2 border-white py-6 px-8 text-lg leading-none cursor-pointer w-fit font-geist font-semibold hover:scale-101 duration-200 hover:bg-white hover:text-black"
+            >
               View my portfolio
             </NavLink>
           </div>
