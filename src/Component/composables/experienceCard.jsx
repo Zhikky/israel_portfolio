@@ -30,7 +30,7 @@ export default function ExperienceCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsInside(true)}
       onMouseLeave={() => setIsInside(false)}
-      className={`width-full relative flex items-center justify-between py-12 px-14 text-white bg-[#2E2E2E] hover:[background-color:var(--hover-bg)] hover:[color:var(--hover-color)] hover:cursor-pointer transition-all duration-300`}
+      className={`width-full relative flex items-center min-h-50 justify-between py-12 px-14 text-white bg-[#2E2E2E] hover:[background-color:var(--hover-bg)] hover:[color:var(--hover-color)] hover:cursor-pointer transition-all duration-300`}
     >
       <div className="flex flex-col gap-11 w-124 max-w-6/10">
         <div className="flex flex-col gap-1">

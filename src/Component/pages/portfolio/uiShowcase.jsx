@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useRef } from "react";
 
 import "swiper/css";
@@ -66,7 +66,7 @@ export default function UiShowcase() {
 
       <div className="flex flex-col justify-between w-full py-18.75 px-45 gap-16 rounded-2xl bg-[#2E2E2E]">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -75,6 +75,12 @@ export default function UiShowcase() {
             el: paginationRef.current,
             clickable: true,
           }}
+          autoplay={{
+            delay: 3300, // 3 seconds
+            disableOnInteraction: false, // Continue autoplay after user interactions
+          }}
+          loop={true}
+          speed={800}
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;

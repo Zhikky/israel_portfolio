@@ -16,6 +16,25 @@ export default function Navbar({ scrolled }) {
       </NavLink>
       <div className="flex space-x-4">
         <NavLink
+          to="/"
+          className={() =>
+            `inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative group`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              home
+              <img
+                src={icon}
+                alt="icon"
+                className={`absolute w-[66px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-60 ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+        <NavLink
           to="/about"
           className={() =>
             `inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative group`
@@ -53,7 +72,9 @@ export default function Navbar({ scrolled }) {
             </>
           )}
         </NavLink>
-        <a
+       
+       {/* hiding contact button on Navbar */}
+        {/* <a
           href="#footer"
           className="inline-flex w-[66px] items-center justify-center text-white text-base font-geist relative group"
         >
@@ -63,7 +84,8 @@ export default function Navbar({ scrolled }) {
             alt="icon"
             className="absolute opacity-0 w-[66px] h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-60 cursor-pointer"
           />
-        </a>
+        </a> */}
+
         <a
           href="/IsraelAdetuwo'sResume.pdf"
           target="_blank"
