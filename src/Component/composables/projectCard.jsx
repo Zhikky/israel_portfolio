@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function ProjectCard({
   projectImage,
   tags,
@@ -69,8 +70,8 @@ export default function ProjectCard({
                   </span>
                 )}
               </p>
-              <a
-                href={path}
+              <NavLink
+                to={path}
                 className="rounded-[50px] text-white border-2 border-white mt-4 lg:mt-0 
                   py-3 px-6 sm:py-4 sm:px-7 md:py-6 md:px-8 
                   text-base sm:text-lg 
@@ -81,7 +82,7 @@ export default function ProjectCard({
                   active:scale-99"
               >
                 Read case study
-              </a>
+              </NavLink>
             </div>
           </div>
 
