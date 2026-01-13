@@ -30,7 +30,7 @@ export default function BeyoundTheScreen({ displayImagePopup }) {
           </p>
         </div>
 
-        <div className="flex justify-center lg:justify-start relative -mt-30 -mb-36 md:mb-0 md:mt-0 w-[40%] sm:w-[90%] md:w-[85%] lg:w-full min-h-[180px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[270px] group lg:left-5/13">
+        <div className="flex justify-center z-10 lg:justify-start relative -mt-30 -mb-36 md:mb-0 md:mt-0 w-[40%] sm:w-[90%] md:w-[85%] lg:w-full min-h-[180px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[270px] group lg:left-5/13">
           <img
             src={israel4}
             alt=""

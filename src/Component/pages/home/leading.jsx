@@ -11,7 +11,7 @@ export default function Leading() {
         people in their spiritual journeys
       </h1>
 
-      <div className="flex flex-col w-full h-auto mt-[-50px] sm:mt-[-70px] md:mt-[-90px] lg:mt-[-102px] relative">
+      <div className="flex flex-col w-full h-auto mt-[-60px] sm:mt-[-70px] md:mt-[-90px] lg:mt-[-102px] relative">
         <img src={preaching} alt="Preaching" className="w-full h-[270px] md:h-auto object-cover " />
         <div className="absolute top-[40px] -left-[50px] md:top-[70px] md:left-[-100px] rotate-[-15deg] hover:rotate-0 cursor-pointer duration-200">
           <ProfileCard role="pastor.Discipler.leader" color={"#CF94E1"} />

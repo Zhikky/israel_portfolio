@@ -5,7 +5,7 @@ export default function ProfileCard({ icon, role, color }) {
         style={{ backgroundColor: color }}
         className="border-3 sm:border-4 border-solid border-black 
           rounded-xl sm:rounded-3xl 
-          px-4 py-3 sm:px-6 sm:py-4 
+          px-4 py-1.25 sm:px-6 sm:py-4 
           flex items-center justify-center sm:justify-start
           gap-2 w-full"
       >
