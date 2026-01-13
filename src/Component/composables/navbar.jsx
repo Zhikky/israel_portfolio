@@ -117,7 +117,7 @@ export default function Navbar({ scrolled }) {
         backgroundColor: scrolled ? "#242424" : "#00000033",
         top: "18px",
       }}
-      className={`flex sticky z-50 justify-between items-center duration-300 
+      className={`flex sticky z-51 justify-between items-center duration-300 
         py-3 px-4 sm:py-4 sm:px-6 
         rounded-2xl sm:rounded-3xl lg:rounded-4xl 
         max-w-[1440px] w-[95%] sm:w-[90%] lg:w-[85%] xl:w-4/5
