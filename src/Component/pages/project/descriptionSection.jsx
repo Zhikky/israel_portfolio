@@ -13,23 +13,23 @@ export default function DescriptionSection({
   timeline,
 }) {
   return (
-    <div className="w-[80%] max-w-[1142px] px-36.5 flex flex-col gap-7.75">
-      <p className="text-[#FFF0C1] font-vina-sans text-6xl leading-13.75">
+    <div className="w-full md:w-[90%] lg:w-[80%] max-w-[1142px] px-4 sm:px-8 md:px-16 lg:px-36.5 flex flex-col gap-4 md:gap-6 lg:gap-7.75">
+      <p className="text-[#FFF0C1] font-vina-sans text-xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight md:leading-relaxed lg:leading-13.75">
         {description}
       </p>
-      <div className="flex flex-col gap-7.75 w-full">
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-7.75 w-full">
         {role && (
-          <div className="w-full flex justify-between items-center ">
-            <p className="text-white font-geist text-[23px] flex flex-row gap-2 items-center ">
-              <img className="w-6 h-6" src={userIcon} />
+          <div className="w-full flex justify-between items-start md:items-center gap-2 md:gap-4">
+            <p className="text-white min-w-[110px] font-geist text-lg md:text-xl lg:text-[23px] flex flex-row gap-2 items-center whitespace-nowrap">
+              <img className="w-5 h-5 md:w-6 md:h-6" src={userIcon} alt="Role icon" />
               Role:{" "}
             </p>
-            <div className="w-[70%] flex gap-5">
+            <div className="w-full md:w-[70%] flex gap-1 md:gap-3 lg:gap-5 flex-wrap">
               {role.map((roles, index) => (
                 <button
                   key={index}
                   style={{ backgroundColor: roles.color }}
-                  className="font-vina-sans text-base p-2.5 rounded-[10px] leading-none "
+                  className="font-vina-sans text-sm md:text-base p-2 md:p-2.5 rounded-[8px] md:rounded-[10px] leading-none"
                 >
                   {roles.title}
                 </button>
@@ -39,17 +39,17 @@ export default function DescriptionSection({
         )}
 
         {theme && (
-          <div className="w-full flex justify-between items-center ">
-            <p className="text-white font-geist text-[23px] flex flex-row gap-2 items-center ">
-              <img className="w-6 h-6" src={themeIcon} />
+          <div className="w-full flex justify-between items-start md:items-center gap-2 md:gap-4">
+            <p className="text-white min-w-[110px] font-geist text-lg md:text-xl lg:text-[23px] flex flex-row gap-2 items-center whitespace-nowrap">
+              <img className="w-5 h-5 md:w-6 md:h-6" src={themeIcon} alt="Theme icon" />
               Theme:{" "}
             </p>
-            <div className="w-[70%] flex gap-2.5">
+            <div className="w-full md:w-[70%] flex gap-1 md:gap-2.5 flex-wrap">
               {theme.map((themes, index) => (
                 <button
                   key={index}
                   style={{ backgroundColor: themes.color }}
-                  className="font-vina-sans text-base p-2.5 rounded-[10px] leading-none "
+                  className="font-vina-sans text-sm md:text-base p-2 md:p-2.5 rounded-[8px] md:rounded-[10px] leading-none"
                 >
                   {themes.title}
                 </button>
@@ -59,17 +59,17 @@ export default function DescriptionSection({
         )}
 
         {tools && (
-          <div className="w-full flex justify-between items-center ">
-            <p className="text-white font-geist text-[23px] flex flex-row gap-2 items-center ">
-              <img className="w-6 h-6" src={toolsIcon} />
+          <div className="w-full flex justify-between items-start md:items-center gap-2 md:gap-4">
+            <p className="text-white min-w-[110px] font-geist text-lg md:text-xl lg:text-[23px] flex flex-row gap-2 items-center whitespace-nowrap">
+              <img className="w-5 h-5 md:w-6 md:h-6" src={toolsIcon} alt="Tools icon" />
               Tools:{" "}
             </p>
-            <div className="w-[70%] flex gap-2.5">
+            <div className="w-full md:w-[70%] flex gap-1 md:gap-2.5 flex-wrap">
               {tools.map((tools, index) => (
                 <button
                   key={index}
                   style={{ backgroundColor: tools.color }}
-                  className="font-vina-sans text-base p-2.5 rounded-[10px] leading-none "
+                  className="font-vina-sans text-sm md:text-base p-2 md:p-2.5 rounded-[8px] md:rounded-[10px] leading-none"
                 >
                   {tools.title}
                 </button>
@@ -79,17 +79,17 @@ export default function DescriptionSection({
         )}
 
         {research && (
-          <div className="w-full flex justify-between items-center ">
-            <p className="text-white font-geist text-[23px] flex flex-row gap-2 items-center ">
-              <img className="w-6 h-6" src={researchIcon} />
+          <div className="w-full flex justify-between items-start md:items-center gap-2 md:gap-4">
+            <p className="text-white min-w-[110px] font-geist text-lg md:text-xl lg:text-[23px] flex flex-row gap-2 items-center whitespace-nowrap">
+              <img className="w-5 h-5 md:w-6 md:h-6" src={researchIcon} alt="Research icon" />
               Research:{" "}
             </p>
-            <div className="w-[70%] flex gap-2.5">
+            <div className="w-full md:w-[70%] flex gap-1 md:gap-2.5 flex-wrap">
               {research.map((researchs, index) => (
                 <button
                   key={index}
                   style={{ backgroundColor: researchs.color }}
-                  className="font-vina-sans text-base p-2.5 rounded-[10px] leading-none "
+                  className="font-vina-sans text-sm md:text-base p-2 md:p-2.5 rounded-[8px] md:rounded-[10px] leading-none"
                 >
                   {researchs.title}
                 </button>
@@ -99,17 +99,17 @@ export default function DescriptionSection({
         )}
 
         {timeline && (
-          <div className="w-full flex justify-between items-center ">
-            <p className="text-white font-geist text-[23px] flex flex-row gap-2 items-center ">
-              <img className="w-6 h-6" src={timelineIcon} />
+          <div className="w-full flex justify-between items-start md:items-center gap-2 md:gap-4">
+            <p className="text-white min-w-[110px] font-geist text-lg md:text-xl lg:text-[23px] flex flex-row gap-2 items-center whitespace-nowrap">
+              <img className="w-5 h-5 md:w-6 md:h-6" src={timelineIcon} alt="Timeline icon" />
               Timeline:
             </p>
-            <div className="w-[70%] flex gap-2.5">
+            <div className="w-full md:w-[70%] flex gap-1 md:gap-2.5 flex-wrap">
               {timeline.map((timelines, index) => (
                 <button
                   key={index}
                   style={{ backgroundColor: timelines.color }}
-                  className="font-vina-sans text-base p-2.5 rounded-[10px] leading-none "
+                  className="font-vina-sans text-sm md:text-base p-2 md:p-2.5 rounded-[8px] md:rounded-[10px] leading-none"
                 >
                   {timelines.title}
                 </button>
