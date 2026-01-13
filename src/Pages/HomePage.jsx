@@ -33,7 +33,6 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  console.log(mobileMenuOpen);
 
   const navigationType = useNavigationType;
 

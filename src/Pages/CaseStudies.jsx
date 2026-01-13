@@ -63,6 +63,7 @@ export default function CaseStudies() {
   const [currentPage, setCurrentPage] = useState();
   const [prevPageContent, setPrevPageContent] = useState(null);
   const [nextPageContent, setNextPageContent] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const foundProject = projects.find((project) => {
@@ -123,6 +124,17 @@ export default function CaseStudies() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => document.body.classList.remove("no-scroll");
+  }, [mobileMenuOpen]);
+
   return (
     <div>
       {loading ? (
@@ -138,7 +150,15 @@ export default function CaseStudies() {
         </div>
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A]">
-          <Navbar scrolled={scrolled} />
+          <Navbar
+            scrolled={scrolled}
+            mobileMenuOpen={mobileMenuOpen}
+            setMobileMenuOpen={setMobileMenuOpen}
+          />
+
+          {mobileMenuOpen && (
+            <div className="fixed z-50 w-full h-screen back  bg-black/30 backdrop-blur-md "></div>
+          )}
 
           <TitleSection title={data.projectName} img={data.img} />
 

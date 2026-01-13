@@ -20,6 +20,7 @@ export default function About() {
   const [scrolled, setScrolled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1200);
@@ -51,6 +52,16 @@ export default function About() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => document.body.classList.remove("no-scroll");
+  }, [mobileMenuOpen]);
+
   return (
     <div>
       {loading ? (
@@ -66,7 +77,15 @@ export default function About() {
         </div>
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A]">
-          <Navbar scrolled={scrolled} />
+          <Navbar
+            scrolled={scrolled}
+            mobileMenuOpen={mobileMenuOpen}
+            setMobileMenuOpen={setMobileMenuOpen}
+          />
+
+          {mobileMenuOpen && (
+            <div className="fixed z-50 w-full h-screen back  bg-black/30 backdrop-blur-md "></div>
+          )}
           <AboutHeroSection />
 
           <div className="w-full max-w-[1440px]">
