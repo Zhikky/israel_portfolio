@@ -85,8 +85,8 @@ export default function HeroSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
-        minHeight: "600px",
-        maxHeight: "1100px",
+        minHeight: "1200px",
+        maxHeight: "1200px",
       }}
     >
       <div className="absolute inset-0 z-1 bg-gradient-to-t from-[#1A1A1A] to-transparent"></div>

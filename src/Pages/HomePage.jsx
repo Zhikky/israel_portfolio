@@ -117,7 +117,7 @@ export default function Home() {
           <Navbar scrolled={scrolled} />
           <div
             style={{ backgroundColor: "#1A1A1A" }}
-            className="flex flex-col items-center min-h-screen w-full scroll-smooth overflow-hidden"
+            className="flex flex-col -mt-[96px] items-center min-h-screen w-full scroll-smooth overflow-hidden"
           >
             <HeroSection />
             <LogoCarousels />
