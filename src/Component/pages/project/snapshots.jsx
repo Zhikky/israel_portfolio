@@ -5,22 +5,22 @@ import image4 from "../../../assets/projectsImage/image 32.png";
 
 export default function Snapshots() {
   return (
-    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-18">
-      <h2 className="font-vina-sans text-2xl tracking-[-2%] text-white">
+    <div className="flex flex-col justify-between gap-4 w-full h-fit max-w-[840px] mt-[46px] md:mt-12 lg:mt-18 px-[26px] md:px-8 lg:px-0">
+      <h2 className="font-vina-sans text-xl md:text-2xl tracking-[-2%] text-white">
         FutureX V1 - Snapshots
       </h2>
 
-      <div className="flex flex-col justify-between gap-10 w-full py-18.75 px-32.5 rounded-2xl bg-[#2E2E2E]">
-        <div className="flex flex-col gap4">
+      <div className="flex flex-col justify-between gap-6 md:gap-10 w-full py-[26px] px-[26px] md:py-18.75 md:px-32.5 rounded-2xl bg-[#2E2E2E]">
+        <div className="flex flex-col gap-4">
           <img src={image1} alt="futureX" className="w-full object-cover" />
         </div>
-        <div className="flex flex-col gap4">
+        <div className="flex flex-col gap-4">
           <img src={image2} alt="futureX" className="w-full object-cover" />
         </div>
-        <div className="flex flex-col gap4">
+        <div className="flex flex-col gap-4">
           <img src={image3} alt="futureX" className="w-full object-cover" />
         </div>
-        <div className="flex flex-col gap4">
+        <div className="flex flex-col gap-4">
           <img src={image4} alt="futureX" className="w-full object-cover" />
         </div>
       </div>
