@@ -32,6 +32,7 @@ export default function Home() {
   const [showImagePopup, setShowImagePopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navigationType = useNavigationType;
 
@@ -114,7 +115,7 @@ export default function Home() {
         </div>
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A] z-900">
-          <Navbar scrolled={scrolled} />
+          <Navbar scrolled={scrolled} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen } />
           <div
             style={{ backgroundColor: "#1A1A1A" }}
             className="flex flex-col -mt-[96px] items-center min-h-screen w-full scroll-smooth overflow-hidden"

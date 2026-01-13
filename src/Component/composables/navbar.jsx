@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import icon from "../../assets/Ellipse 1.png";
 
-export default function Navbar({ scrolled }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function Navbar({ scrolled, mobileMenuOpen, setMobileMenuOpen }) {
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div
