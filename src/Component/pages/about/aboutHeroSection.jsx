@@ -3,7 +3,11 @@ import israel from "../../../../src/assets/IMG-20250813-WA0031 2.webp";
 export default function AboutHeroSection() {
   return (
     <section className="flex flex-col items-center w-full max-w-[1440px] mt-12 sm:mt-16 md:mt-20 lg:mt-23.25 mb-16 sm:mb-24 md:mb-32 lg:mb-41 px-10 sm:px-12 md:px-20 lg:px-36">
-      <img src={israel} alt="Israel Adetuwo" className="w-48 sm:w-56 md:w-64 lg:w-74 h-auto -mb-8 sm:-mb-10 md:-mb-12 lg:-mb-16 z-3" />
+      <img
+        src={israel}
+        alt="Israel Adetuwo"
+        className="w-48 sm:w-56 md:w-64 lg:w-74 h-auto -mb-8 sm:-mb-10 md:-mb-12 lg:-mb-16 z-3"
+      />
 
       <div className="flex flex-col w-full px-6 sm:px-10 md:px-16 lg:px-21 pt-12 sm:pt-16 md:pt-20 lg:pt-25 pb-12 sm:pb-16 md:pb-20 lg:pb-24.75 rounded-xl sm:rounded-[20px] bg-[#2E2E2E]">
         <div className="flex flex-col lg:flex-row justify-between gap-8 sm:gap-10 md:gap-12 lg:gap-15">
@@ -12,9 +16,13 @@ export default function AboutHeroSection() {
             <br /> Designer.
             <br /> Strategist
           </h1>
-          <button className="sm:hidden  rounded-[50px] bg-[#94E1CA] text-[#1A1A1A] py-4 px-8 sm:py-5 sm:px-9 lg:py-6.5 lg:px-11 text-sm sm:text-base leading-none cursor-pointer w-full sm:w-fit text-center font-geist font-semibold hover:scale-101 duration-200 active:scale-99">
-              Work with me
-            </button>
+          <a
+            href="mailto:adetuwoisrael24@gmail.com"
+            target="_blank"
+            className="sm:hidden  rounded-[50px] bg-[#94E1CA] text-[#1A1A1A] py-4 px-8 sm:py-5 sm:px-9 lg:py-6.5 lg:px-11 text-sm sm:text-base leading-none cursor-pointer w-full sm:w-fit text-center font-geist font-semibold hover:scale-101 duration-200 active:scale-99"
+          >
+            Work with me
+          </a>
 
           <div className="flex flex-col w-full lg:w-[42.75%]">
             <p className="text-white text-base sm:text-[17px] lg:text-[18px] font-geist leading-relaxed">
@@ -30,9 +38,13 @@ export default function AboutHeroSection() {
                 users to thousands.
               </span>
             </p>
-            <button className="hidden sm:block mt-6 sm:mt-8 lg:mt-9.5 rounded-[50px] bg-[#94E1CA] text-[#1A1A1A] py-4 px-8 sm:py-5 sm:px-9 lg:py-6.5 lg:px-11 text-sm sm:text-base leading-none cursor-pointer w-full sm:w-fit text-center font-geist font-semibold hover:scale-101 duration-200 active:scale-99">
+            <a
+              href="mailto:adetuwoisrael24@gmail.com"
+              target="_blank"
+              className="hidden sm:block mt-6 sm:mt-8 lg:mt-9.5 rounded-[50px] bg-[#94E1CA] text-[#1A1A1A] py-4 px-8 sm:py-5 sm:px-9 lg:py-6.5 lg:px-11 text-sm sm:text-base leading-none cursor-pointer w-full sm:w-fit text-center font-geist font-semibold hover:scale-101 duration-200 active:scale-99"
+            >
               Work with me
-            </button>
+            </a>
           </div>
         </div>
 
