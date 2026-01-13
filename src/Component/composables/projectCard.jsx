@@ -18,6 +18,7 @@ export default function ProjectCard({
       }}
       className="w-full sticky flex flex-col items-center justify-between 
         h-auto md:h-162
+        sm:pt-[24px]
         px-9 sm:px-8 md:px-16 lg:px-36.25
         z-5"
     >
@@ -28,7 +29,7 @@ export default function ProjectCard({
       >
         <div
           className="flex flex-col w-full max-w-3xl
-          gap-6 sm:gap-8 md:gap-10 px-7 lg:px-0 pt-10 justify-between overflow-hidden"
+          gap-6 sm:gap-8 md:gap-10 px-4 lg:px-0 pt-6.5 justify-between overflow-hidden"
         >
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-6.5 justify-between">
             {/* Title and Tags */}
@@ -69,7 +70,7 @@ export default function ProjectCard({
               </p>
               <a
                 href={path}
-                className="rounded-[50px] text-white border-2 border-white 
+                className="rounded-[50px] text-white border-2 border-white mt-4 lg:mt-0 
                   py-3 px-6 sm:py-4 sm:px-7 md:py-6 md:px-8 
                   text-base sm:text-lg 
                   leading-none cursor-pointer w-fit text-center
@@ -89,7 +90,7 @@ export default function ProjectCard({
             alt={title}
             className="w-full object-cover object-top 
               h-48 sm:h-64 md:h-80 lg:h-103
-              rounded-t-lg sm:rounded-t-xl"
+              rounded-t-sm sm:rounded-t-xl"
           />
         </div>
       </div>

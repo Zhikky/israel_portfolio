@@ -12,7 +12,7 @@ export default function Experiences() {
   return (
     <section className="flex flex-col max-w-[1440px] w-full mt-40 sm:mt-20 md:mt-24 lg:mt-30 py-20 sm:py-36 md:py-48 lg:py-60 px-[36px] sm:px-8 md:px-16 lg:px-38 min-h-300 bg-[#1A1A1A] z-0">
       <div className="w-full lg:w-fit relative">
-        <div className="absolute left-[-50px] sm:left-[-45px] md:left-[-60px] lg:left-[-75px] top-[-50px] sm:top-[-35px] md:top-[-45px] lg:top-[-52px] rotate-[-10deg] hover:rotate-0 cursor-pointer duration-200">
+        <div className="absolute left-[-50px] sm:left-[-45px] md:left-[-60px] lg:left-[-75px] top-[-30px] sm:top-[-35px] md:top-[-45px] lg:top-[-52px] rotate-[-10deg] hover:rotate-0 cursor-pointer duration-200">
           <ProfileCard role="EXPERIENCE" color="#FFB05F" />
         </div>
         <h1 className="font-vina-sans w-[75%] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[88%] sm:leading-snug lg:leading-14 tracking-tight text-[#FFF0C1] md:w-full lg:w-7/10">
