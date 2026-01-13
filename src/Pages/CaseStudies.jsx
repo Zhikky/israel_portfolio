@@ -153,8 +153,9 @@ export default function CaseStudies() {
 
           {data.coverImage && (
             <img
-              className="w-full h-fit max-w-[840px] mt-36.5"
+              className="w-full h-auto max-w-[840px] mt-[148px] md:mt-36.5 px-[26px] md:px-8 lg:px-0 rounded-lg object-cover"
               src={data.coverImage}
+              alt="Cover"
             />
           )}
 
