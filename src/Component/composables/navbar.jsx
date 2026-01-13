@@ -128,7 +128,7 @@ export default function Navbar({ scrolled }) {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-130 ${
+        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-screen ${
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
