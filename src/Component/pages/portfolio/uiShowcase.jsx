@@ -23,17 +23,17 @@ export default function UiShowcase() {
   const paginationRef = useRef(null);
 
   return (
-    <div className="flex flex-col relative justify-between gap-16 w-full h-fit max-w-[1140px] mt-75 mb-60">
-      <h2 className="font-vina-sans text-4xl tracking-[-2%] text-white">
+    <div className="flex flex-col relative justify-between gap-8 sm:gap-12 lg:gap-16 w-full h-fit max-w-[1140px] mt-40 sm:mt-40 md:mt-56 lg:mt-75 mb-20 sm:mb-32 md:mb-44 lg:mb-60 px-9 sm:px-0">
+      <h2 className="font-vina-sans text-2xl sm:text-3xl lg:text-4xl tracking-[-2%] text-white">
         UI Showcase
       </h2>
 
       <button
         ref={prevRef}
-        className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10"
+        className="swiper-button-prev absolute left-4 sm:left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 flex items-center justify-center"
       >
         <svg
-          className="swiper-navigation-icon"
+          className="swiper-navigation-icon w-3 sm:w-4"
           width="11"
           height="20"
           viewBox="0 0 11 20"
@@ -48,10 +48,10 @@ export default function UiShowcase() {
 
       <button
         ref={nextRef}
-        className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10"
+        className="swiper-button-next absolute right-4 sm:right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 flex items-center justify-center"
       >
         <svg
-          className="swiper-navigation-icon"
+          className="swiper-navigation-icon w-3 sm:w-4"
           width="11"
           height="20"
           viewBox="0 0 11 20"
@@ -64,7 +64,7 @@ export default function UiShowcase() {
         </svg>
       </button>
 
-      <div className="flex flex-col justify-between w-full py-18.75 px-45 gap-16 rounded-2xl bg-[#2E2E2E]">
+      <div className="flex flex-col justify-between w-full py-8 px-6 sm:py-12 sm:px-12 md:py-16 md:px-24 lg:py-18.75 lg:px-45 gap-8 sm:gap-12 lg:gap-16 rounded-xl sm:rounded-2xl bg-[#2E2E2E]">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation={{
@@ -76,8 +76,8 @@ export default function UiShowcase() {
             clickable: true,
           }}
           autoplay={{
-            delay: 3300, // 3 seconds
-            disableOnInteraction: false, // Continue autoplay after user interactions
+            delay: 3300,
+            disableOnInteraction: false,
           }}
           loop={true}
           speed={800}
@@ -90,71 +90,71 @@ export default function UiShowcase() {
           <SwiperSlide>
             <img
               src={showcase1}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 1"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase2}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 2"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase3}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 3"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase4}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 4"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase5}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 5"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase6}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 6"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase7}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 7"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase8}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 8"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase9}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 9"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={showcase10}
-              alt="ui showcase"
-              className="w-full h-132 object-cover"
+              alt="UI showcase 10"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-120 xl:h-132 object-cover rounded-lg"
             />
           </SwiperSlide>
         </Swiper>
@@ -162,7 +162,7 @@ export default function UiShowcase() {
 
       <div
         ref={paginationRef}
-        className="swiper-pagination !relative !bottom-0 mt-4"
+        className="swiper-pagination !relative !bottom-0 mt-2 sm:mt-4"
       />
     </div>
   );
