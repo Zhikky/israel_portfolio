@@ -32,7 +32,8 @@ export default function Home() {
   const [showImagePopup, setShowImagePopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  console.log(mobileMenuOpen);
 
   const navigationType = useNavigationType;
 
@@ -82,14 +83,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (showImagePopup) {
+    if (showImagePopup || mobileMenuOpen) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
 
     return () => document.body.classList.remove("no-scroll");
-  }, [showImagePopup]);
+  }, [showImagePopup, mobileMenuOpen]);
 
   return (
     <div className="relative">
@@ -115,7 +116,16 @@ export default function Home() {
         </div>
       ) : (
         <div className="relative flex flex-col items-center w-full bg-[#1A1A1A] z-900">
-          <Navbar scrolled={scrolled} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen } />
+          <Navbar
+            scrolled={scrolled}
+            mobileMenuOpen={mobileMenuOpen}
+            setMobileMenuOpen={setMobileMenuOpen}
+          />
+
+          {mobileMenuOpen && (
+            <div className="fixed z-50 w-full h-screen back  bg-black/30 backdrop-blur-md "></div>
+          )}
+
           <div
             style={{ backgroundColor: "#1A1A1A" }}
             className="flex flex-col -mt-[96px] items-center min-h-screen w-full scroll-smooth overflow-hidden"

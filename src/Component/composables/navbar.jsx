@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import icon from "../../assets/Ellipse 1.png";
 
 export default function Navbar({ scrolled, mobileMenuOpen, setMobileMenuOpen }) {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div
@@ -127,7 +126,7 @@ export default function Navbar({ scrolled, mobileMenuOpen, setMobileMenuOpen }) 
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-screen ${
+        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-135 ${
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
