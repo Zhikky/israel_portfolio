@@ -8,13 +8,13 @@ import { NavLink } from "react-router-dom";
 export default function HeroSection() {
   return (
     <div
-      className="flex justify-center w-full relative mt-[-60px] sm:mt-[-80px] lg:mt-[-96px] h-[1200px] md:h-[1140px] bg-[center] md:bg-center "
+      className="flex justify-center w-full relative bg-[length:auto_800px] lg:bg-cover bg-[center_0%] lg:bg-center mt-[-60px] sm:mt-[-80px] lg:mt-[-96px] h-[1150px] md:h-[1140px] "
       style={{
         backgroundImage: `url(${IsraelBackground})`,
-        backgroundSize: "cover",
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="absolute inset-0 z-1 bg-gradient-to-t from-[#1A1A1A] to-transparent"></div>
+     <div className="absolute inset-0 z-1 bg-gradient-to-t from-[#1A1A1A] from-0% via-[#1A1A1A] via-30% to-transparent lg:from-[#1A1A1A] lg:via-transparent lg:to-transparent"></div>
 
       <div className="relative max-w-[1440px] h-full px-8 md:px-16 lg:px-28 pt-16 sm:pt-20 md:pt-24 lg:pt-16 pb-12 sm:pb-20 md:pb-24 lg:pb-30 flex flex-col items-center justify-end">
         <div className="flex flex-col lg:flex-row justify-between z-1 w-full flex-wrap relative gap-8 lg:gap-0">
