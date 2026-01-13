@@ -63,7 +63,7 @@ export default function Footer({ handleCopy, showCopyPopup }) {
 
         {/* Right Column - Social Links */}
         <div className="flex lg:flex-col items-start justify-between lg:items-left 
-          gap-6 sm:gap-8 lg:gap-14 w-full sm:w-auto lg:w-39">
+          gap-4 sm:gap-8 lg:gap-14 w-full sm:w-auto lg:w-39">
           <a
             href="https://www.linkedin.com/in/israeladetuwo?originalSubdomain=ng"
             target="_blank"
