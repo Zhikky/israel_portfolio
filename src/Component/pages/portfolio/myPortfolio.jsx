@@ -12,7 +12,7 @@ import pen from "../../../assets/iconoir_design-nib.png";
 export default function MyPortfolio() {
   return (
     <div className="w-full flex flex-col pt-12 sm:pt-16 md:pt-20 lg:pt-28 items-center justify-center relative h-fit">
-      <h1 className="-mb-2 sm:-mb-3 lg:-mb-4 relative text-center w-full lg:w-fit text-white font-vina-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[12rem] tracking-tight leading-tight sm:leading-snug md:leading-[120px] lg:leading-[180px] px-9 lg:px-0">
+      <h1 className="-mb-8.5 sm:-mb-3 lg:-mb-4 relative text-center w-full lg:w-fit text-white font-vina-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[12rem] tracking-tight leading-tight sm:leading-snug md:leading-[120px] lg:leading-[180px] px-9 lg:px-0">
         <div className=" z-0 text-black tracking-normal absolute -left-[100px] top-[0px] lg:-left-55 lg:top-[78px] rotate-[12deg] hover:rotate-0 cursor-pointer duration-200">
           <ProfileCard role="Product Designer" color="#9EE5FF" icon={pen} />
         </div>
