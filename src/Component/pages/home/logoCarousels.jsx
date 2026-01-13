@@ -1,3 +1,4 @@
+
 import "@egjs/react-flicking/dist/flicking.css";
 import Flicking from "@egjs/react-flicking";
 import { AutoPlay } from "@egjs/flicking-plugins";
@@ -16,19 +17,19 @@ export default function LogoCarousels() {
   ];
 
   return (
-    <section className="flex flex-col items-center gap-9.5 mt-18 px-37 pt-10 pb-43 max-w-[1440px] h-1 w-full z-0">
-      <p className="text-[#ABABAB] font-geist text-base leading-6.75">
+    <section className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-9.5 mt-12 sm:mt-14 lg:mt-18 px-4 sm:px-8 md:px-16 lg:px-37 pt-6 sm:pt-8 lg:pt-10 pb-20 sm:pb-32 lg:pb-43 max-w-[1440px] h-1 w-full z-0">
+      <p className="text-[#ABABAB] font-geist text-sm sm:text-base leading-6 sm:leading-6.75 text-center">
         Companies I've worked for
       </p>
       <div className="w-full">
         <Flicking plugins={plugins} circular={true}>
-          <img src={brandLogo1} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo2} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo3} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo4} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo5} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo6} alt="test" className="panel w-[9%] mx-10" />
-          <img src={brandLogo7} alt="test" className="panel w-[9%] mx-10" />
+          <img src={brandLogo1} alt="DesignLab" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo2} alt="Jetiffy" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo3} alt="Kinnra" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo4} alt="Secfix" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo5} alt="TeckPlus" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo6} alt="TestGorilla" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
+          <img src={brandLogo7} alt="Vencru" className="panel w-[20%] sm:w-[15%] md:w-[12%] lg:w-[9%] mx-4 sm:mx-6 md:mx-8 lg:mx-10" />
         </Flicking>
       </div>
     </section>

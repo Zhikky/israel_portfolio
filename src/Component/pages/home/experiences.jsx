@@ -10,21 +10,21 @@ import kinnra from "../../../assets/brandIcons/kinnraLogo.png";
 
 export default function Experiences() {
   return (
-    <section className="flex flex-col max-w-[1440px] w-full mt-30 py-60 px-38 min-h-300 bg-[#1A1A1A] z-0">
-      <div className="w-fit relative">
-        <div className="absolute left-[-75px] top-[-52px] rotate-[-7.9deg] hover:rotate-0 cursor-pointer duration-200 ">
+    <section className="flex flex-col max-w-[1440px] w-full mt-40 sm:mt-20 md:mt-24 lg:mt-30 py-20 sm:py-36 md:py-48 lg:py-60 px-[36px] sm:px-8 md:px-16 lg:px-38 min-h-300 bg-[#1A1A1A] z-0">
+      <div className="w-full lg:w-fit relative">
+        <div className="absolute left-[-50px] sm:left-[-45px] md:left-[-60px] lg:left-[-75px] top-[-50px] sm:top-[-35px] md:top-[-45px] lg:top-[-52px] rotate-[-10deg] hover:rotate-0 cursor-pointer duration-200">
           <ProfileCard role="EXPERIENCE" color="#FFB05F" />
         </div>
-        <h1 className="font-vina-sans text-7xl/14 tracking-tight text-[#FFF0C1] w-7/10">
-          over the years i’ve built ambitious startups
+        <h1 className="font-vina-sans w-[75%] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[88%] sm:leading-snug lg:leading-14 tracking-tight text-[#FFF0C1] md:w-full lg:w-7/10">
+          over the years i've built ambitious startups
         </h1>
       </div>
 
-      <div className="flex flex-col z-10 w-full mt-[-4px] rounded-3xl overflow-hidden">
+      <div className="flex flex-col z-10 w-full mt-[-2px] lg:mt-[-4px] rounded-2xl sm:rounded-3xl overflow-hidden">
         <ExperienceCard
           company="Testgorilla , Amsterdam"
           role="Product Designer  | 2022 - Present"
-          description="I designed the V2 of the Code-runner which increased candidate satisfaction by 20% over 3 months. I’m currently designing the experience for the Candidate Environment of the TG WebApp. "
+          description="I designed the V2 of the Code-runner which increased candidate satisfaction by 20% over 3 months. I'm currently designing the experience for the Candidate Environment of the TG WebApp. "
           logo={testGorilla}
           bgColor="#D410AA"
         />

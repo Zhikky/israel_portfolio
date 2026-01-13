@@ -65,32 +65,105 @@ html {
   justify-content: space-between;
 }
 
+/* Mobile - Base (more spacing) */
 [data-aos="israel-1"] {
   transition-property: transform;
 
   &.aos-animate {
-    transform: rotate(-24deg) translateX(-220px) translateY(-60px);
+    transform: rotate(-24deg) translateX(-110px) translateY(-30px);
   }
 }
 [data-aos="israel-2"] {
   transition-property: transform;
 
   &.aos-animate {
-    transform: rotate(-4deg) translateX(-80px) translateY(-20px);
+    transform: rotate(-4deg) translateX(-40px) translateY(-15px);
   }
 }
 [data-aos="israel-3"] {
   transition-property: transform;
 
   &.aos-animate {
-    transform: rotate(12deg) translateX(70px) translateY(0px);
+    transform: rotate(12deg) translateX(35px) translateY(0px);
   }
 }
 [data-aos="israel-4"] {
   transition-property: transform;
 
   &.aos-animate {
-    transform: rotate(-20deg) translateX(200px) translateY(90px);
+    transform: rotate(-20deg) translateX(100px) translateY(40px);
+  }
+}
+
+/* Small screens (640px+) - Scale up a bit */
+@media (min-width: 640px) {
+  [data-aos="israel-1"] {
+    &.aos-animate {
+      transform: rotate(-24deg) translateX(-140px) translateY(-38px);
+    }
+  }
+  [data-aos="israel-2"] {
+    &.aos-animate {
+      transform: rotate(-4deg) translateX(-52px) translateY(-14px);
+    }
+  }
+  [data-aos="israel-3"] {
+    &.aos-animate {
+      transform: rotate(12deg) translateX(45px) translateY(0px);
+    }
+  }
+  [data-aos="israel-4"] {
+    &.aos-animate {
+      transform: rotate(-20deg) translateX(130px) translateY(55px);
+    }
+  }
+}
+
+/* Medium screens (768px+) - Scale up more */
+@media (min-width: 768px) {
+  [data-aos="israel-1"] {
+    &.aos-animate {
+      transform: rotate(-24deg) translateX(-180px) translateY(-50px);
+    }
+  }
+  [data-aos="israel-2"] {
+    &.aos-animate {
+      transform: rotate(-4deg) translateX(-65px) translateY(-17px);
+    }
+  }
+  [data-aos="israel-3"] {
+    &.aos-animate {
+      transform: rotate(12deg) translateX(58px) translateY(0px);
+    }
+  }
+  [data-aos="israel-4"] {
+    &.aos-animate {
+      transform: rotate(-20deg) translateX(165px) translateY(73px);
+    }
+  }
+}
+
+/* Large screens (1024px+) - Full desktop spacing */
+@media (min-width: 1024px) {
+  [data-aos="israel-1"] {
+    &.aos-animate {
+      transform: rotate(-24deg) translateX(-220px) translateY(-60px);
+    }
+  }
+  [data-aos="israel-2"] {
+    &.aos-animate {
+      transform: rotate(-4deg) translateX(-80px) translateY(-20px);
+    }
+  }
+  [data-aos="israel-3"] {
+    &.aos-animate {
+      transform: rotate(12deg) translateX(70px) translateY(0px);
+    }
+  }
+  [data-aos="israel-4"] {
+    &.aos-animate {
+      transform: rotate(-20deg) translateX(200px) translateY(90px);
+    }
   }
 }
 
