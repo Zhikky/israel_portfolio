@@ -14,11 +14,12 @@ export default function ProjectCard({
       style={{
         top: topValue,
         height: height ? height : "auto",
-        paddingTop: paddingTop ? paddingTop : "0px",
+        paddingTop: window.innerWidth >= 768 
+      ? (paddingTop ? paddingTop : "0px")
+      : "24px", // 24px on mobile, original value on md+
       }}
       className="w-full sticky flex flex-col items-center justify-between 
         h-auto md:h-162
-        sm:pt-[24px]
         px-9 sm:px-8 md:px-16 lg:px-36.25
         z-5"
     >

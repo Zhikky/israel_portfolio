@@ -226,3 +226,14 @@ html {
   right: 100px !important;
 }
 
+
+@media screen and (max-width: 767px) {
+  .swiper-button-prev {
+  left: 20px !important;
+}
+
+.swiper-button-next {
+  right: 20px !important;
+}
+
+}
