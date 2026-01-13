@@ -1,107 +1,3 @@
-// import { useLayoutEffect, useRef } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import israel1 from "../../../assets/65b0f40f48044f6dc52e517b9c124df3f252bc73.webp";
-// import israel2 from "../../../assets/travels/IMG-20250813-WA0034.webp";
-// import israel3 from "../../../assets/travels/IMG-20250815-WA0019.webp";
-// import israel4 from "../../../assets/travels/IMG-20250815-WA0022.webp";
-// import israel5 from "../../../assets/travels/IMG-20250815-WA0035.webp";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// export default function Travels() {
-//   const pinRef = useRef(null); // pinned section
-//   const trackRef = useRef(null); // horizontal row
-
-//   useLayoutEffect(() => {
-//     const ctx = gsap.context(() => {
-//       const track = trackRef.current;
-
-//       const maxX = () => track.scrollWidth - window.innerWidth; // total horizontal distance
-
-//       gsap.to(track, {
-//         x: () => -maxX(),
-//         ease: "none",
-//         scrollTrigger: {
-//           trigger: pinRef.current,
-//           start: "top-=280 top", // begins when container is 450px from viewport top
-//           end: () => `+=${maxX()}`, // distance for horizontal scroll
-//           pin: true,
-//           scrub: true,
-//           invalidateOnRefresh: true,
-//           pinSpacing: true,
-//         },
-//       });
-//     }, pinRef);
-
-//     // ensure correct sizing after first paint
-//     requestAnimationFrame(() => ScrollTrigger.refresh());
-
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <section className="relative max-w-[1440px] mt-60 mb-40">
-//       <div ref={pinRef} className="overflow-hidden">
-//         {/* The horizontal track */}
-//         <div
-//           ref={trackRef}
-//           className="flex flex-nowrap h-fit will-change-transform gap-10 w-[3500px]"
-//         >
-//           <p className="font-covered-by-your-grace text-base text-[#fff0c1] w-[240px] ml-37">
-//             When I’m not designing or teaching, you’ll find me mentoring,
-//             planning my next trip, or pushing myself at the gym. I believe that
-//             clarity, craft, and conviction should guide how we live and work.
-//           </p>
-//           <div>
-//             <img
-//               src={israel2}
-//               alt=""
-//               className="min-w-86 object-cover h-[460px] rounded-2xl"
-//             />
-//             <p className="font-vina-sans text-[52px] text-white">CROATIA</p>
-//           </div>
-//           <div>
-//             <img
-//               src={israel3}
-//               alt=""
-//               className="min-w-86 object-cover h-[460px] rounded-2xl"
-//             />
-//             <p className="font-vina-sans text-[52px] text-white">GERMANY</p>
-//           </div>
-//           <div>
-//             <img
-//               src={israel4}
-//               alt=""
-//               className="min-w-86 object-cover h-[460px] rounded-2xl"
-//             />
-//             <p className="font-vina-sans text-[52px] text-white">
-//               SOUTH AFRICA
-//             </p>
-//           </div>
-//           <div>
-//             <img
-//               src={israel1}
-//               alt=""
-//               className="min-w-86 object-cover h-[460px] rounded-2xl"
-//             />
-//             <p className="font-vina-sans text-[52px] text-white">PORTUGAL</p>
-//           </div>
-//           <div className="pr-37">
-//             <img
-//               src={israel5}
-//               alt=""
-//               className="min-w-86 object-cover h-[460px] rounded-2xl"
-//             />
-//             <p className="font-vina-sans text-[52px] text-white">GYM</p>
-//           </div>
-//           {/* Add more panels as needed */}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -114,34 +10,32 @@ import israel5 from "../../../assets/travels/IMG-20250815-WA0035.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Travels() {
-  const pinWrapperRef = useRef(null); // wrapper that gets pinned
-  const trackRef = useRef(null); // horizontal row
+  const pinWrapperRef = useRef(null);
+  const trackRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const track = trackRef.current;
 
-      const maxX = () => track.scrollWidth - window.innerWidth; // total horizontal distance
+      const maxX = () => track.scrollWidth - window.innerWidth;
 
       gsap.to(track, {
         x: () => -maxX(),
         ease: "none",
         scrollTrigger: {
           trigger: pinWrapperRef.current,
-          start: "top-=280 top", // start pinning when container is 450px above viewport
-          end: () => `+=${maxX()}`, // scroll distance matches horizontal width
+          start: "top-=280 top",
+          end: () => `+=${maxX()}`,
           pin: true,
           scrub: true,
-          invalidateOnRefresh: true, // recalc on resize or refresh
+          invalidateOnRefresh: true,
         },
       });
     }, pinWrapperRef);
 
-    // Refresh once browser has finished loading images/fonts
     const handleLoad = () => ScrollTrigger.refresh();
     window.addEventListener("load", handleLoad);
 
-    // Cleanup
     return () => {
       ctx.revert();
       window.removeEventListener("load", handleLoad);
@@ -149,60 +43,58 @@ export default function Travels() {
   }, []);
 
   return (
-    <section className="relative max-w-[1440px] mt-60 mb-40">
-      {/* Pin this wrapper, not the <section> itself */}
+    <section className="relative max-w-[1440px] mt-20 sm:mt-32 md:mt-44 lg:mt-60 mb-16 sm:mb-24 md:mb-32 lg:mb-40">
       <div ref={pinWrapperRef} className="overflow-hidden">
-        {/* The horizontal track */}
         <div
           ref={trackRef}
-          className="flex flex-nowrap h-fit will-change-transform gap-10 w-[3500px]"
+          className="flex flex-nowrap h-fit will-change-transform gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-[2200px] sm:w-[2800px] md:w-[3200px] lg:w-[3500px]"
         >
-          <p className="font-covered-by-your-grace text-base text-[#fff0c1] w-[240px] ml-37">
-            When I’m not designing or teaching, you’ll find me mentoring,
+          <p className="font-covered-by-your-grace text-sm sm:text-base text-[#fff0c1] w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] ml-9 sm:ml-16 md:ml-24 lg:ml-37">
+            When I'm not designing or teaching, you'll find me mentoring,
             planning my next trip, or pushing myself at the gym. I believe that
             clarity, craft, and conviction should guide how we live and work.
           </p>
           <div>
             <img
               src={israel2}
-              alt=""
-              className="min-w-86 object-cover h-[460px] rounded-2xl"
+              alt="Croatia travel"
+              className="min-w-64 sm:min-w-72 md:min-w-80 lg:min-w-86 object-cover h-[300px] sm:h-[360px] md:h-[420px] lg:h-[460px] rounded-xl sm:rounded-2xl"
             />
-            <p className="font-vina-sans text-[52px] text-white">CROATIA</p>
+            <p className="font-vina-sans text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] text-white">CROATIA</p>
           </div>
           <div>
             <img
               src={israel3}
-              alt=""
-              className="min-w-86 object-cover h-[460px] rounded-2xl"
+              alt="Germany travel"
+              className="min-w-64 sm:min-w-72 md:min-w-80 lg:min-w-86 object-cover h-[300px] sm:h-[360px] md:h-[420px] lg:h-[460px] rounded-xl sm:rounded-2xl"
             />
-            <p className="font-vina-sans text-[52px] text-white">GERMANY</p>
+            <p className="font-vina-sans text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] text-white">GERMANY</p>
           </div>
           <div>
             <img
               src={israel4}
-              alt=""
-              className="min-w-86 object-cover h-[460px] rounded-2xl"
+              alt="South Africa travel"
+              className="min-w-64 sm:min-w-72 md:min-w-80 lg:min-w-86 object-cover h-[300px] sm:h-[360px] md:h-[420px] lg:h-[460px] rounded-xl sm:rounded-2xl"
             />
-            <p className="font-vina-sans text-[52px] text-white">
+            <p className="font-vina-sans text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] text-white">
               SOUTH AFRICA
             </p>
           </div>
           <div>
             <img
               src={israel1}
-              alt=""
-              className="min-w-86 object-cover h-[460px] rounded-2xl"
+              alt="Portugal travel"
+              className="min-w-64 sm:min-w-72 md:min-w-80 lg:min-w-86 object-cover h-[300px] sm:h-[360px] md:h-[420px] lg:h-[460px] rounded-xl sm:rounded-2xl"
             />
-            <p className="font-vina-sans text-[52px] text-white">PORTUGAL</p>
+            <p className="font-vina-sans text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] text-white">PORTUGAL</p>
           </div>
-          <div className="pr-37">
+          <div className="pr-9 sm:pr-16 md:pr-24 lg:pr-37">
             <img
               src={israel5}
-              alt=""
-              className="min-w-86 object-cover h-[460px] rounded-2xl"
+              alt="Gym"
+              className="min-w-64 sm:min-w-72 md:min-w-80 lg:min-w-86 object-cover h-[300px] sm:h-[360px] md:h-[420px] lg:h-[460px] rounded-xl sm:rounded-2xl"
             />
-            <p className="font-vina-sans text-[52px] text-white">GYM</p>
+            <p className="font-vina-sans text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] text-white">GYM</p>
           </div>
         </div>
       </div>
