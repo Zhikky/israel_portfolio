@@ -128,7 +128,7 @@ export default function Navbar({ scrolled }) {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-125 ${
+        className={`lg:hidden fixed inset-0 bg-[#242424] transition-all duration-300 rounded-2xl h-130 ${
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -139,7 +139,7 @@ export default function Navbar({ scrolled }) {
           <NavLink
             to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-white text-2xl font-geist relative group"
+            className="text-white uppercase text-5xl font-vina-sans relative group"
           >
             {({ isActive }) => (
               <>
@@ -155,7 +155,7 @@ export default function Navbar({ scrolled }) {
           <NavLink
             to="/about"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-white text-2xl font-geist relative group"
+            className="text-white uppercase text-5xl font-vina-sans relative group"
           >
             {({ isActive }) => (
               <>
@@ -171,7 +171,7 @@ export default function Navbar({ scrolled }) {
           <NavLink
             to="/portfolio"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-white text-2xl font-geist relative group"
+            className="text-white uppercase text-5xl font-vina-sans relative group"
           >
             {({ isActive }) => (
               <>
@@ -189,7 +189,7 @@ export default function Navbar({ scrolled }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-white text-2xl font-geist relative"
+            className="text-white uppercase text-5xl font-vina-sans relative"
           >
             resume
             <span
@@ -200,8 +200,7 @@ export default function Navbar({ scrolled }) {
             href="mailto:adetuwoisrael24@gmail.com"
             target="_blank"
             onClick={() => setMobileMenuOpen(false)}
-            className="rounded-2xl py-4 px-8 bg-[#94E1CA] text-base leading-none cursor-pointer mt-8 w-fit"
-          >
+            className="text-[#94E1CA] uppercase text-5xl font-vina-sans relative">
             Get in touch
           </a>
         </div>
