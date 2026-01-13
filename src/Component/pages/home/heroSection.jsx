@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 export default function HeroSection() {
   return (
     <div
-      className="flex justify-center w-full relative mt-[-60px] sm:mt-[-80px] lg:mt-[-96px] h-[1000px] md:h-[1140px] bg-[center] md:bg-center "
+      className="flex justify-center w-full relative mt-[-60px] sm:mt-[-80px] lg:mt-[-96px] h-[1200px] md:h-[1140px] bg-[center] md:bg-center "
       style={{
         backgroundImage: `url(${IsraelBackground})`,
         backgroundSize: "cover",
